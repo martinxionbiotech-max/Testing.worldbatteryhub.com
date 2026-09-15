@@ -1,0 +1,87 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CCA Testing: How Cold Cranking Amps Are Measured | World Battery Hub</title>
+    <meta name="description" content="How cold cranking amps (CCA) are measured — the SAE J537 cold-chamber discharge test, the EN/JIS/DIN variants, and why conductance testers only estimate CCA." />
+    <link rel="canonical" href={`${SITE}/cca-testing/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CCA Testing: How Cold Cranking Amps Are Measured</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-15</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> A true CCA test chills a fully-charged battery to the standard's temperature,
+        then discharges it at a constant current for a set time while watching that the voltage stays above a cut-off.
+        Under SAE J537 that is <strong>−18°C for 30 seconds at or above 7.2&nbsp;V</strong>. The CCA rating is the
+        current the battery can sustain under those conditions.
+      </div>
+
+      <h2>The cold-chamber test (SAE J537)</h2>
+      <ol>
+        <li>Fully charge the battery, then chill it to −18°C (0°F) and hold it there.</li>
+        <li>Discharge at a constant current for 30 seconds.</li>
+        <li>The battery passes if its voltage stays at or above 7.2&nbsp;V (1.2&nbsp;V per cell) for the full 30 seconds.</li>
+        <li>The rating is the current at which it just passes.</li>
+      </ol>
+
+      <h2>Why the number depends on the standard</h2>
+      <table>
+        <thead><tr><th>Standard</th><th>Temperature</th><th>Cut-off / method</th></tr></thead>
+        <tbody>
+          <tr><td>JIS D5301</td><td>−15°C</td><td>reference (warmer → higher number)</td></tr>
+          <tr><td>SAE J537</td><td>−18°C (0°F)</td><td>30 s, ≥7.2V</td></tr>
+          <tr><td>EN 50342</td><td>−18°C</td><td>10 s to 7.5V</td></tr>
+          <tr><td>DIN 43539</td><td>−18°C</td><td>30 s to 9.0V</td></tr>
+        </tbody>
+      </table>
+      <p>A warmer test or a lower cut-off prints a <em>higher</em> number for the same battery. A JIS value (tested at
+      −15°C) reads higher than an EN/SAE value (tested at −18°C) — they are not comparable. See the
+      <a href="https://worldbatteryhub.com/lead-acid/cca/what-is-cca/">main-site CCA article</a> for the full explanation.</p>
+
+      <h2>Conductance testers estimate — they do not load-test</h2>
+      <p>Workshop conductance testers measure the battery's internal resistance/conductance and <strong>estimate</strong>
+      CCA from it. They are fast and non-destructive, but they are not a 30-second cold-chamber discharge. Two things
+      follow:</p>
+      <ul>
+        <li>An estimate is only meaningful against a <strong>nominal CCA</strong> that used the <em>same standard</em>.</li>
+        <li>A measured CCA that drops far below nominal over time signals ageing — even though the absolute number is an estimate.</li>
+      </ul>
+
+      <h2>The Author's Take</h2>
+      <div class="box">
+        <p><strong>Position:</strong> The most important thing a CCA test result must tell you is the <em>standard</em>,
+        not just the number — a tester set to the wrong basis will "pass" or "fail" the same battery differently.</p>
+        <p><strong>Reasoning:</strong> JIS and SAE differ by 3°C and a cut-off voltage, which is enough to move the
+        printed value. If the test report does not name the basis, the number is a guess, not a measurement.</p>
+        <p class="muted"><em>This is the author's editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>SAE J537 — cold cranking test method (−18°C, 30 s, 7.2V).</li>
+        <li>EN 50342, JIS D5301, DIN 43539 — standard variants.</li>
+        <li>Conductance-tester documentation (manufacturer manuals) — estimation vs load-test distinction.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>
