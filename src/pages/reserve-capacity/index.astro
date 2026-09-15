@@ -1,0 +1,92 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reserve Capacity Testing | World Battery Hub</title>
+    <meta name="description" content="Reserve capacity (RC) measures the minutes a battery can sustain a 25-amp load before dropping to 10.5V. How it is tested, how it differs from Ah and CCA, and why it matters." />
+    <link rel="canonical" href={`${SITE}/reserve-capacity/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Reserve Capacity Testing</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-15</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> Reserve capacity (RC) is the <strong>minutes a fully-charged 12V battery can
+        deliver 25 amps at 27°C (80°F) before dropping to 10.5V</strong>. It measures how long the battery keeps the
+        electrical system running with the alternator out of the picture — a practical endurance figure, distinct
+        from Ah and CCA.
+      </div>
+
+      <h2>The test procedure</h2>
+      <ol>
+        <li>Fully charge the battery and stabilise it at 27°C.</li>
+        <li>Apply a constant 25-amp load.</li>
+        <li>Record the time until the voltage falls to 10.5V.</li>
+        <li>That time, in minutes, is the reserve capacity.</li>
+      </ol>
+      <p>A battery rated <strong>120 min RC</strong> holds 25 A for two hours before reaching 10.5V. The fixed 25 A is
+      chosen to approximate a vehicle's running electrical load — lights, ignition and electronics — which is why RC
+      maps so directly to the "alternator just failed" scenario.</p>
+
+      <h2>RC vs Ah vs CCA</h2>
+      <table>
+        <thead><tr><th>Test</th><th>Question it answers</th><th>Method</th></tr></thead>
+        <tbody>
+          <tr><td>CCA</td><td>Can it start the engine cold?</td><td>30 s at −18°C to 7.2V</td></tr>
+          <tr><td>RC</td><td>How long without the alternator?</td><td>25 A at 27°C to 10.5V</td></tr>
+          <tr><td>Ah (C20)</td><td>How much energy stored?</td><td>20 h to 10.5V</td></tr>
+        </tbody>
+      </table>
+      <p>
+        The three are related but independent. RC and Ah overlap (both are endurance measures), but RC is a fixed-load
+        minutes figure while Ah is a slow 20-hour energy figure — and a battery can crank strongly (high CCA) yet
+        hold a short reserve (low RC).
+      </p>
+
+      <h2>Why it matters for modern vehicles</h2>
+      <p>
+        Modern vehicles draw current with the engine off — telematics, alarms, infotainment, stop-start systems.
+        The deeper that parasitic load, the more RC matters, because RC is the buffer that keeps the vehicle operable
+        between charging events and through an alternator failure. This is also why deep-cycle and AGM batteries
+        carry higher RC than a thin-plate starting battery of the same group.
+      </p>
+
+      <h2>The Author's Take</h2>
+      <div class="box">
+        <p><strong>Position:</strong> Reserve capacity is the rating buyers ignore because they only plan for starting —
+        and it is precisely the rating that matters in the failure they did not plan for.</p>
+        <p><strong>Reasoning:</strong> Everyone specs CCA for the cold morning; almost no one specs RC for the alternator that
+        fails at night, when the difference between a 60-minute and a 120-minute battery is the difference between
+        limping home and being stranded. A complete battery spec names CCA, RC and Ah — not just the number that gets
+        you started.</p>
+        <p class="muted"><em>This is the author's editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>Battery Council International (BCI) — reserve-capacity definition and test.</li>
+        <li>SAE J537 / EN 50342 — battery test methods (reference).</li>
+        <li>Manufacturer datasheets — RC values and plate-design trade-offs.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>
