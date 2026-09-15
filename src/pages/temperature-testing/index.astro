@@ -1,0 +1,82 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Temperature &amp; Thermal Testing | World Battery Hub</title>
+    <meta name="description" content="Temperature and thermal testing for batteries — how a battery behaves across its temperature range, and the thermal-abuse tests that verify it fails safely at the extremes." />
+    <link rel="canonical" href={`${SITE}/temperature-testing/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Temperature &amp; Thermal Testing</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-15</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> Temperature testing has two jobs. <strong>Performance testing</strong> measures
+        how the battery behaves across its operating range — the cold tests that produce CCA, and the hot tests that
+        expose accelerated aging. <strong>Thermal-abuse testing</strong> pushes the battery past its limits with external
+        heat to verify it fails safely rather than catastrophically.
+      </div>
+
+      <h2>Why temperature dominates every result</h2>
+      <p>
+        Temperature is the single biggest external influence on a battery — it raises internal resistance when cold
+        and accelerates every degradation reaction when hot. Any performance test must therefore state its
+        temperature, and the cold tests (like CCA at −18°C) are deliberately run at the worst case so the number
+        reflects real-world capability.
+      </p>
+
+      <h2>The two test families</h2>
+      <table>
+        <thead><tr><th>Family</th><th>What it does</th><th>Typical standard</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Cold performance</strong></td><td>Discharge at low temperature (e.g. CCA at −18°C)</td><td>SAE J537, EN 50342</td></tr>
+          <tr><td><strong>High-temperature aging</strong></td><td>Cycle or hold at elevated temperature to accelerate aging</td><td>IEC 62660</td></tr>
+          <tr><td><strong>Thermal abuse</strong></td><td>Expose to external heat to verify no runaway propagation</td><td>UN 38.3, IEC 62133</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Cold vs hot: two different failures</h2>
+      <p>
+        Cold reduces <em>performance</em> — the battery cannot deliver as much current, but it is not damaged. Heat
+        reduces <em>life</em> — every 10°C rise roughly doubles the rate of the aging reactions (a rule of thumb, not a
+        fixed law), so a hot battery ages faster permanently. That is why cold is a test of capability, while heat is
+        a test of longevity and safety.
+      </p>
+
+      <h2>The Author's Take</h2>
+      <div class="box">
+        <p><strong>Position:</strong> Temperature is the variable that turns a single battery into many different
+        batteries — cold, hot, fresh, aged — which is why a test result without its temperature is not a measurement,
+        it is a guess.</p>
+        <p><strong>Reasoning:</strong> Cold changes the number, heat changes the life. A buyer or technician who treats
+        temperature as part of the spec — not a footnote — reads battery data correctly.</p>
+        <p class="muted"><em>This is the author's editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>SAE J537 / EN 50342 — cold cranking and temperature tests.</li>
+        <li>UN 38.3 / IEC 62133 / IEC 62660 — thermal abuse and high-temperature tests.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>
