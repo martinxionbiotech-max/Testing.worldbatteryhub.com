@@ -8,7 +8,7 @@ const SITE = 'https://testing.worldbatteryhub.com';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Temperature &amp; Thermal Testing | World Battery Hub</title>
-    <meta name="description" content="Temperature and thermal testing for batteries — how a battery behaves across its temperature range, and the thermal-abuse tests that verify it fails safely at the extremes." />
+    <meta name="description" content="Temperature and thermal testing for batteries — how cold lowers performance and heat shortens life, the temperature-performance relationship, and the thermal-abuse tests that verify safe failure." />
     <link rel="canonical" href={`${SITE}/temperature-testing/`} />
     <style>
       body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
@@ -28,8 +28,8 @@ const SITE = 'https://testing.worldbatteryhub.com';
       <p class="muted">Battery Testing Methods · Last reviewed 2026-09-15</p>
 
       <div class="box">
-        <strong>Direct answer:</strong> Temperature testing has two jobs. <strong>Performance testing</strong> measures
-        how the battery behaves across its operating range — the cold tests that produce CCA, and the hot tests that
+        <strong>Direct answer:</strong> Temperature testing has two jobs. <strong>Performance testing</strong> measures how
+        the battery behaves across its operating range — the cold tests that produce CCA, and the hot tests that
         expose accelerated aging. <strong>Thermal-abuse testing</strong> pushes the battery past its limits with external
         heat to verify it fails safely rather than catastrophically.
       </div>
@@ -42,6 +42,21 @@ const SITE = 'https://testing.worldbatteryhub.com';
         reflects real-world capability.
       </p>
 
+      <h2>Cold vs hot: two different failures</h2>
+      <table>
+        <thead><tr><th>Extreme</th><th>Effect on performance</th><th>Effect on life</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Cold (below ~0°C)</strong></td><td>Lower current (higher resistance)</td><td>Little permanent damage</td></tr>
+          <tr><td><strong>Heat (above ~40°C)</strong></td><td>Higher momentary current</td><td>Permanent accelerated aging</td></tr>
+        </tbody>
+      </table>
+      <p>
+        The asymmetry is the key insight: cold reduces <em>capability</em> without harming the battery, while heat
+        reduces <em>life</em> permanently. A rough engineering rule is that reaction rates roughly double with every
+        10°C rise — a rule of thumb, not a fixed law — which is why a hot battery ages much faster even if it
+        momentarily delivers more current.
+      </p>
+
       <h2>The two test families</h2>
       <table>
         <thead><tr><th>Family</th><th>What it does</th><th>Typical standard</th></tr></thead>
@@ -52,21 +67,23 @@ const SITE = 'https://testing.worldbatteryhub.com';
         </tbody>
       </table>
 
-      <h2>Cold vs hot: two different failures</h2>
+      <h2>Why lithium and lead-acid differ here</h2>
       <p>
-        Cold reduces <em>performance</em> — the battery cannot deliver as much current, but it is not damaged. Heat
-        reduces <em>life</em> — every 10°C rise roughly doubles the rate of the aging reactions (a rule of thumb, not a
-        fixed law), so a hot battery ages faster permanently. That is why cold is a test of capability, while heat is
-        a test of longevity and safety.
+        The two chemistries respond differently to the extremes. Lead-acid tolerates cold (with reduced CCA) but is
+        degraded by sustained heat, which accelerates corrosion and water loss. Lithium is <em>dangerous</em> to charge
+        below ~0°C (lithium plating) and needs active cooling to prevent
+        <a href="https://worldbatteryhub.com/lithium/thermal-runaway/">thermal runaway</a> at the hot end — so
+        lithium's temperature window is narrower and more heavily managed.
       </p>
 
       <h2>The Author's Take</h2>
       <div class="box">
         <p><strong>Position:</strong> Temperature is the variable that turns a single battery into many different
-        batteries — cold, hot, fresh, aged — which is why a test result without its temperature is not a measurement,
-        it is a guess.</p>
-        <p><strong>Reasoning:</strong> Cold changes the number, heat changes the life. A buyer or technician who treats
-        temperature as part of the spec — not a footnote — reads battery data correctly.</p>
+        batteries — cold, hot, fresh, aged — and the most useful distinction is that cold takes capability while heat
+        takes life.</p>
+        <p><strong>Reasoning:</strong> Cold changes the number on a test; heat changes how long the battery lasts. A buyer or
+        technician who treats temperature as part of the spec — not a footnote — reads battery data correctly, and
+        understands why lithium's window is narrower than lead-acid's.</p>
         <p class="muted"><em>This is the author's editorial view, not a purchasing guarantee.</em></p>
       </div>
 
@@ -74,6 +91,8 @@ const SITE = 'https://testing.worldbatteryhub.com';
       <ul>
         <li>SAE J537 / EN 50342 — cold cranking and temperature tests.</li>
         <li>UN 38.3 / IEC 62133 / IEC 62660 — thermal abuse and high-temperature tests.</li>
+        <li>Battery engineering references — temperature dependence of resistance and reaction rates.</li>
+        <li>Manufacturer technical documentation — operating-temperature ranges by chemistry.</li>
       </ul>
 
       <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
