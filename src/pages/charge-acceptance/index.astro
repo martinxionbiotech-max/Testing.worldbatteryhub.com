@@ -8,7 +8,7 @@ const SITE = 'https://testing.worldbatteryhub.com';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Charge Acceptance Testing | World Battery Hub</title>
-    <meta name="description" content="Charge acceptance tests how quickly a battery can take a charge — the property that matters for start-stop and regenerative systems. How it is measured and why a low number predicts early failure." />
+    <meta name="description" content="Charge acceptance tests how fast a battery takes charge — the property start-stop and regenerative systems depend on. Measurement, the EFB/AGM difference, and why a low number predicts early failure." />
     <link rel="canonical" href={`${SITE}/charge-acceptance/`} />
     <style>
       body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
@@ -29,21 +29,36 @@ const SITE = 'https://testing.worldbatteryhub.com';
 
       <div class="box">
         <strong>Direct answer:</strong> Charge acceptance is <strong>how fast a battery can take charge</strong> — measured
-        by the current a partially-discharged battery accepts at a controlled voltage, or the charge it recovers in a
-        set time. It matters most for <strong>start-stop and regenerative systems</strong>, where the battery must accept
+        by the current a partially-discharged battery accepts at a controlled voltage, or the amp-hours it recovers in
+        a set window. It matters most for <strong>start-stop and regenerative systems</strong>, where the battery must accept
         frequent fast recharges. A falling charge-acceptance number predicts early failure before capacity or CCA do.
       </div>
 
       <h2>How it is measured</h2>
       <p>
-        A common method discharges the battery to a defined state, then applies a charge voltage and measures the
-        <strong>current the battery accepts</strong> (or the amp-hours recovered) in a fixed window. A healthy
-        battery accepts charge quickly; a battery with high internal resistance — from sulfation or corrosion —
-        accepts little. The test is effectively a read on internal resistance through the charging path rather than
-        the discharge path.
+        A common method (under <strong>EN 50342</strong>) discharges the battery to a defined state, then applies a
+        charge voltage and measures the <strong>current the battery accepts</strong> over a fixed interval — the charge
+        acceptance is the charge (amp-hours) recovered in that window. A healthy battery accepts charge quickly; a
+        battery with high internal resistance — from sulfation or corrosion — accepts little. The test is effectively
+        a read on internal resistance through the charging path rather than the discharge path.
       </p>
 
-      <h2>Why it matters for start-stop</h2>
+      <h2>Charge acceptance by technology</h2>
+      <table>
+        <thead><tr><th>Technology</th><th>Charge acceptance (relative)</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Conventional flooded</td><td>Lowest</td><td>Plain lead plates, no charge-acceptance additive</td></tr>
+          <tr><td>EFB</td><td>Higher</td><td>Carbon on the negative plate improves charge acceptance</td></tr>
+          <tr><td>AGM</td><td>Highest</td><td>Glass-mat construction lowers internal resistance</td></tr>
+        </tbody>
+      </table>
+      <p>
+        This is the concrete reason start-stop systems specify EFB or AGM: the higher charge acceptance means the
+        battery recovers fast enough between engine-off events to stay charged. A flooded battery in the same
+        duty cycle accepts charge too slowly and progressively under-charges.
+      </p>
+
+      <h2>Why it matters for start-stop and regeneration</h2>
       <table>
         <thead><tr><th>System</th><th>Why charge acceptance is critical</th></tr></thead>
         <tbody>
@@ -52,25 +67,32 @@ const SITE = 'https://testing.worldbatteryhub.com';
           <tr><td>Conventional SLI</td><td>Less critical — one full charge per drive cycle</td></tr>
         </tbody>
       </table>
+
+      <h2>What a low number means</h2>
       <p>
-        This is why EFB and AGM exist: carbon additives and the glass-mat construction both improve charge
-        acceptance, which is the specific property a start-stop duty cycle demands.
+        Charge acceptance declines as a battery ages, for the same reasons CCA does — rising internal resistance from
+        sulfation and corrosion. Because the decline shows on the charging side first, a low charge-acceptance
+        reading is often the <strong>earliest</strong> warning of a failing start-stop battery, before capacity or CCA
+        have visibly fallen.
       </p>
 
       <h2>The Author's Take</h2>
       <div class="box">
         <p><strong>Position:</strong> Charge acceptance is the battery property nobody quotes but every start-stop
-        system depends on — and a low number is the earliest warning that a battery is dying in a way CCA and
-        capacity will only reveal later.</p>
-        <p><strong>Reasoning:</strong> It measures the charging side, where aging shows up first. A buyer or technician who
-        checks charge acceptance catches a failing start-stop battery before it strands the driver.</p>
+        system depends on — and it is the earliest signal of aging because it reads the charging side, where
+        resistance rises before the discharge side shows it.</p>
+        <p><strong>Reasoning:</strong> It measures the charging path, where aging shows up first. A buyer or technician who
+        checks charge acceptance catches a failing start-stop battery before it strands the driver — and understands
+        why EFB and AGM exist in the first place.</p>
         <p class="muted"><em>This is the author's editorial view, not a purchasing guarantee.</em></p>
       </div>
 
       <h2>Sources</h2>
       <ul>
-        <li>EN 50342 — charge-acceptance test method.</li>
-        <li>Manufacturer test documentation — charge-acceptance measurement.</li>
+        <li>EN 50342 — charge-acceptance test method (European starter-battery standard).</li>
+        <li>Battery Council International (BCI) — battery testing and technology guidance.</li>
+        <li>Manufacturer technical documentation (Varta, Bosch, Exide) — EFB/AGM charge-acceptance comparison.</li>
+        <li>Battery engineering references — charge acceptance and internal resistance.</li>
       </ul>
 
       <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
