@@ -1,0 +1,84 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Capacity Testing (C20) | World Battery Hub</title>
+    <meta name="description" content="How battery capacity (Ah) is measured — the 20-hour C20 discharge to 10.5V, why the rate matters, and how to read a measured capacity against the label." />
+    <link rel="canonical" href={`${SITE}/capacity-testing/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Capacity Testing (C20)</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-15</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> Capacity (Ah) is measured by discharging a fully-charged battery at a
+        <strong>constant current</strong> until it reaches a cut-off voltage, then computing <strong>current × time</strong>.
+        The lead-acid standard is the <strong>C20 rate</strong> — the current that drains the battery in 20 hours to
+        <strong>10.5V</strong>. Capacity falls at higher rates, which is why the rate must always be stated.
+      </div>
+
+      <h2>The basic procedure</h2>
+      <ol>
+        <li>Fully charge and let the battery rest to a stable state.</li>
+        <li>Discharge at a constant current (resistive or electronic load).</li>
+        <li>Stop at the cut-off voltage (10.5V for a 12V battery).</li>
+        <li>Record time; capacity = discharge current × hours.</li>
+      </ol>
+      <p>A 60&nbsp;Ah battery discharged at 3&nbsp;A should run 20 hours. If it quits at 15 hours, its real capacity is
+      45&nbsp;Ah — a 25% loss from the label.</p>
+
+      <h2>Why the rate matters</h2>
+      <table>
+        <thead><tr><th>Discharge rate</th><th>Typical capacity delivered</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>C20 (20-hour)</td><td>Rated (100%)</td><td>Slow, extracts the electrolyte deep in the plates</td></tr>
+          <tr><td>C5 (5-hour)</td><td>Lower than rated</td><td>Faster discharge wastes energy as heat</td></tr>
+          <tr><td>C1 (1-hour)</td><td>Much lower</td><td>Heavy load, significant internal loss</td></tr>
+        </tbody>
+      </table>
+      <p>Two "60&nbsp;Ah" batteries can differ in a real, faster-discharge application — which is why the rate is
+      part of the spec, not an afterthought.</p>
+
+      <h2>Reading a measured capacity</h2>
+      <p>A new battery usually delivers at or above its label. Below about <strong>80% of rated C20 capacity</strong> is
+      the conventional end-of-life signal for many applications. For a used battery, the measured C20 capacity is
+      the honest number to compare against the label — a battery that still holds 12.6V can nonetheless have lost
+      much of its capacity.</p>
+
+      <h2>The Author's Take</h2>
+      <div class="box">
+        <p><strong>Position:</strong> The capacity label is a promise made at one specific rate, and the most useful
+        question is always "at what rate?" — because the same battery is a 60&nbsp;Ah battery at C20 and a smaller one
+        at C5.</p>
+        <p><strong>Reasoning:</strong> Capacity is quoted at the flattering slow rate. A buyer who understands the rate — and
+        asks for the measured C20 on a used battery — knows what they are actually buying.</p>
+        <p class="muted"><em>This is the author's editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>EN 50342 / JIS D5301 — capacity test methods (C20 rate).</li>
+        <li>Battery Council International (BCI) — capacity and reserve-capacity definitions.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>

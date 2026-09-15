@@ -1,0 +1,89 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cycle &amp; Safety Testing | World Battery Hub</title>
+    <meta name="description" content="Cycle-life and safety testing for batteries — how cycle life is measured, and the abuse tests (overcharge, short circuit, crush, thermal) that verify a battery's safety limits." />
+    <link rel="canonical" href={`${SITE}/cycle-safety/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cycle &amp; Safety Testing</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-15</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> <strong>Cycle-life testing</strong> repeatedly charges and discharges a battery
+        under defined conditions and counts the cycles until capacity falls below a threshold (commonly 80% of
+        original). <strong>Safety testing</strong> deliberately stresses a battery past its limits — overcharge, short
+        circuit, crush, puncture, thermal abuse — to verify it fails safely rather than catastrophically. Cycle life
+        is a lifespan number; safety testing is a "does it fail safely" number.
+      </div>
+
+      <h2>How cycle life is measured</h2>
+      <p>
+        Cycle life is always quoted against a specific <strong>depth of discharge (DoD)</strong>, temperature and charge
+        rate. A shallow cycle (20% DoD) yields far more cycles than a deep one (80% DoD), which is why a bare
+        "2,000 cycles" claim is meaningless without its conditions. The result is reported as the cycle count at
+        which capacity falls to a threshold — typically <strong>80% of original</strong>.
+      </p>
+
+      <h2>What cycle-life conditions matter</h2>
+      <table>
+        <thead><tr><th>Variable</th><th>Effect on cycle count</th></tr></thead>
+        <tbody>
+          <tr><td>Depth of discharge</td><td>Deeper discharge → fewer cycles</td></tr>
+          <tr><td>Temperature</td><td>Heat accelerates aging → fewer cycles</td></tr>
+          <tr><td>Charge/discharge rate (C-rate)</td><td>Faster → more heat and stress → fewer cycles</td></tr>
+          <tr><td>Charge voltage</td><td>Over-voltage → faster degradation</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Safety (abuse) tests</h2>
+      <ul>
+        <li><strong>Overcharge</strong> — charging past the voltage limit to confirm it does not ignite.</li>
+        <li><strong>Short circuit</strong> — a direct short to confirm the protection responds.</li>
+        <li><strong>Crush / puncture</strong> — mechanical damage to confirm no thermal runaway propagation.</li>
+        <li><strong>Thermal</strong> — external heat to confirm the cell stays within its temperature limits.</li>
+      </ul>
+      <p>
+        These are codified in standards such as <strong>UN 38.3</strong> (transport), <strong>IEC 62133</strong> and
+        <strong>IEC 62660</strong> (cell safety). A battery that passes abuse testing is not "impossible to fail" — it has
+        been shown to fail in a controlled way under defined abuse.
+      </p>
+
+      <h2>The Author's Take</h2>
+      <div class="box">
+        <p><strong>Position:</strong> A cycle-life number without its depth-of-discharge is marketing, and a "safety
+        certified" claim without the named standard is vague — both need their conditions to mean anything.</p>
+        <p><strong>Reasoning:</strong> Cycle count and safety are both condition-dependent, yet they are routinely quoted as
+        bare numbers. The buyer who asks "at what DoD, temperature and rate" for cycle life, and "which standard" for
+        safety, is the one who actually gets a comparable figure.</p>
+        <p class="muted"><em>This is the author's editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>IEC 62660 / IEC 62133 / UN 38.3 — cycle and safety test standards.</li>
+        <li>Battery engineering references — cycle-life and abuse-test methodology.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>
