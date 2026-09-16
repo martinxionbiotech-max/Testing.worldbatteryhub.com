@@ -61,6 +61,18 @@ const SITE = 'https://testing.worldbatteryhub.com';
   <li>What are the trip thresholds and response times?</li>
   <li>Is the balancing passive or active, and was SOC accuracy verified?</li>
       </ul>
+      <h2>Protection threshold examples</h2>
+      <table>
+        <thead><tr><th>Protection</th><th>Typical trip (LFP, per cell)</th></tr></thead>
+        <tbody>
+          <tr><td>Overvoltage</td><td>~3.65–3.75V</td></tr>
+          <tr><td>Undervoltage</td><td>~2.5–2.8V</td></tr>
+          <tr><td>Overcurrent</td><td>Per cell spec (often 1–3C continuous)</td></tr>
+          <tr><td>Temperature</td><td>Charge blocked below ~0°C; cutoff above ~50–60°C</td></tr>
+        </tbody>
+      </table>
+      <p class="muted">Typical values — the test verifies each threshold trips at its spec, not that it exists.</p>
+
 
 
       <h2>Our Read</h2>
