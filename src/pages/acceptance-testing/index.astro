@@ -1,0 +1,86 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Acceptance Testing: Verifying Incoming Batteries | World Battery Hub</title>
+    <meta name="description" content="Acceptance testing verifies incoming batteries against the specification before installation — visual checks, date codes, OCV and a spot test. The incoming-QC procedure." />
+    <link rel="canonical" href={`${SITE}/acceptance-testing/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; width: 30%; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Acceptance Testing: Verifying Incoming Batteries</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-16</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> Acceptance testing verifies a <strong>batch of incoming batteries against
+        the specification before installation</strong>. The standard sequence: <strong>visual checks</strong>
+        (case, terminals, labels), <strong>date-code check</strong> (shelf age), <strong>open-circuit
+        voltage</strong> (state of charge on arrival), and a <strong>spot conductance or load test</strong> on a
+        sample. It catches damage and shelf-aging before they become field failures.
+      </div>
+
+      <h2>The incoming-QC sequence</h2>
+      <table>
+        <thead><tr><th>Step</th><th>What it catches</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1. Visual</strong></td><td>Case damage, terminal defects, label mismatch</td></tr>
+          <tr><td><strong>2. Date code</strong></td><td>Shelf age (see <a href="https://worldbatteryhub.com/lead-acid/battery-date-code/">date codes</a>)</td></tr>
+          <tr><td><strong>3. OCV</strong></td><td>State of charge on arrival</td></tr>
+          <tr><td><strong>4. Spot test (sample)</strong></td><td>Conductance or <a href="/load-testing/">load test</a> on a sample</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Why it pays for itself</h2>
+      <p>
+        A battery that arrives shelf-aged or damaged fails in service — often at the worst moment, at site cost
+        far above the battery's price. The acceptance sequence takes minutes per unit and catches the defects
+        while the supplier is still responsible (see
+        <a href="https://technology.worldbatteryhub.com/quality-control/">manufacturing QC</a> for the factory-side
+        version of the same logic).
+      </p>
+
+      <h2>What to do with failures</h2>
+      <p>
+        A failed acceptance test is a <strong>supplier conversation, not a repair</strong>: document the reading,
+        quarantine the unit, and reject per the purchase terms. The pattern matters too — isolated failures are
+        logistics damage; repeated failures across a batch point to a supplier or shipping problem worth
+        escalating.
+      </p>
+
+      <h2>What This Means</h2>
+      <div class="box">
+        <p><strong>My take:</strong> Acceptance testing is the cheapest quality insurance a battery buyer has — a
+        five-minute incoming check converts supplier problems from field emergencies into paperwork — and its
+        real value is the pattern: one failure is noise, a batch of failures is a supplier signal.</p>
+        <p><strong>Why:</strong> The failure curve is front-loaded: defects that will strand a site usually show
+        themselves at arrival, before installation. Testing at the dock is where the buyer still has leverage —
+        afterwards, the supplier's responsibility and the buyer's options both shrink.</p>
+        <p class="muted"><em>My editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>Purchasing and incoming-QC practice references.</li>
+        <li>Battery engineering references — shelf aging and arrival-state checks.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>
