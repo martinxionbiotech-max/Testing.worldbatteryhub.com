@@ -1,0 +1,80 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Conductance vs Load Test | World Battery Hub</title>
+    <meta name="description" content="Conductance tests screen with a fast AC signal; load tests apply real current and give the verdict. How the two battery tests compare and when each wins." />
+    <link rel="canonical" href={`${SITE}/conductance-vs-load-test/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; width: 34%; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Conductance vs Load Test</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-16</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> The <strong>conductance tester</strong> sends a small AC signal and
+        estimates CCA from how well the battery conducts — <strong>fast, non-destructive</strong>, works on a
+        partially charged battery. The <strong>load test</strong> draws a real current (about half CCA for 15
+        seconds) and watches the voltage — <strong>slower, more demanding, definitive</strong>. Conductance
+        screens; the load test verdicts.
+      </div>
+
+      <h2>The comparison</h2>
+      <table>
+        <thead><tr><th></th><th>Conductance</th><th>Load test</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Signal</strong></td><td>Small AC injection</td><td>Real DC load (½ CCA, 15 s)</td></tr>
+          <tr><td><strong>Speed</strong></td><td>Seconds</td><td>~15+ seconds plus setup</td></tr>
+          <tr><td><strong>Battery stress</strong></td><td>None</td><td>Real — needs decent charge first</td></tr>
+          <tr><td><strong>Answer</strong></td><td>Estimated CCA (health proxy)</td><td>Direct delivery verdict</td></tr>
+          <tr><td><strong>Best for</strong></td><td>Screening, partial charge</td><td>Final verdict, warranty</td></tr>
+        </tbody>
+      </table>
+
+      <h2>When each wins</h2>
+      <p>
+        Conductance wins where <strong>speed and gentleness</strong> matter — fleet screening, batteries at any
+        state of charge, the modern shop floor. The load test wins where the <strong>verdict must be final</strong> —
+        warranty decisions and disputed diagnoses — because it measures the actual delivery, not a correlate
+        (see <a href="/load-testing/">load testing</a> and
+        <a href="/resistance-conductance/">conductance</a>). They agree on healthy batteries; the disagreement
+        cases are where the load test's directness matters.
+      </p>
+
+      <h2>The Author's Take</h2>
+      <div class="box">
+        <p><strong>Position:</strong> Conductance vs load test is proxy vs ground truth — the electronic tester is
+        the better screening tool, the load test is the better court — and a serious diagnosis uses the fast tool
+        first and the direct one when the answer matters.</p>
+        <p><strong>Reasoning:</strong> The AC tester correlates with delivery; the load test is delivery. When they
+        agree, either suffices; when they disagree, the direct measurement wins. Knowing which question is being
+        asked — screen or verdict — is how the two tools are used correctly.</p>
+        <p class="muted"><em>This is the author's editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>Tester-manufacturer documentation — conductance and load test procedures.</li>
+        <li>BCI / SAE references — load test thresholds and conductance correlation.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>
