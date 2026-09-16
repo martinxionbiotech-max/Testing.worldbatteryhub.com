@@ -1,0 +1,83 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Impedance Testing | World Battery Hub</title>
+    <meta name="description" content="Impedance testing measures a battery's frequency-dependent resistance with an AC signal — more diagnostic detail than simple conductance, revealing the internal processes behind the reading." />
+    <link rel="canonical" href={`${SITE}/impedance-testing/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; width: 32%; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Impedance Testing</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-16</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> Impedance testing measures a battery's <strong>frequency-dependent
+        resistance</strong> — the opposition to an AC signal at one or several frequencies. Unlike the single-number
+        conductance read, an impedance measurement (especially swept over frequencies, as in EIS) separates the
+        battery's <strong>ohmic, charge-transfer and diffusion</strong> components, giving a more diagnostic picture
+        of where the battery is degrading.
+      </div>
+
+      <h2>Impedance vs resistance vs conductance</h2>
+      <table>
+        <thead><tr><th>Measurement</th><th>What it captures</th><th>Detail level</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Conductance</strong></td><td>Single AC read, inverse of resistance</td><td>One number — health proxy</td></tr>
+          <tr><td><strong>DC resistance</strong></td><td>Resistance under load or pulse</td><td>One number</td></tr>
+          <tr><td><strong>Impedance (EIS)</strong></td><td>Resistance across frequencies</td><td>Separates internal processes</td></tr>
+        </tbody>
+      </table>
+      <p>
+        Conductance is the field-tool read; impedance spectroscopy is the laboratory read. The field tool tells you
+        <em>that</em> the battery is degrading; the impedance sweep begins to tell you <em>where</em> — see
+        <a href="/resistance-conductance/">resistance and conductance</a> for the single-number version.
+      </p>
+
+      <h2>What the frequency sweep reveals</h2>
+      <p>
+        At high frequencies the signal sees mostly the <strong>ohmic path</strong> (connectors, electrolyte
+        resistance); at mid frequencies it sees the <strong>charge-transfer</strong> at the electrode interface; at
+        low frequencies it sees <strong>diffusion</strong> inside the active material. Each band reacts differently
+        to sulfation, corrosion and drying, so the swept measurement separates the aging mechanisms instead of
+        blending them into one number.
+      </p>
+
+      <h2>The Author's Take</h2>
+      <div class="box">
+        <p><strong>Position:</strong> Impedance testing is the difference between knowing a battery is failing and
+        knowing why it is failing — the field tools triage, the frequency sweep diagnoses, and the two belong
+        together in any serious battery evaluation.</p>
+        <p><strong>Reasoning:</strong> A single resistance number is a health score without a cause. The impedance sweep
+        decomposes that score into its mechanisms, which is exactly what warranty, research and large-fleet decisions
+        need — the diagnosis, not just the verdict.</p>
+        <p class="muted"><em>This is the author's editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>Battery engineering references — electrochemical impedance spectroscopy.</li>
+        <li>IEC 62660 — lithium cell impedance test references.</li>
+        <li>Tester and instrument documentation — AC impedance measurement.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>
