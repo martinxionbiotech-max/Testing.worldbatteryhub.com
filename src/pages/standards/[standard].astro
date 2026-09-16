@@ -46,6 +46,9 @@ const jsonLd = {
       .related a { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; padding: 4px 10px; text-decoration: none; font-size: 0.9rem; }
     </style>
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  
+    <script type="application/ld+json" set:html={"{\"@context\": \"https://schema.org\", \"@type\": \"WebPage\", \"@id\": \"https://testing.worldbatteryhub.com/standards/\", \"url\": \"https://testing.worldbatteryhub.com/standards/\", \"name\": \"Standards\", \"publisher\": {\"@id\": \"https://worldbatteryhub.com/#organization\"}, \"isPartOf\": {\"@id\": \"https://testing.worldbatteryhub.com/\"}}"} />
+    <script type="application/ld+json" set:html={"{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Battery Testing\", \"item\": \"https://testing.worldbatteryhub.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Standards\", \"item\": \"https://testing.worldbatteryhub.com/standards/\"}]}"} />
   </head>
   <body>
     <div class="container">
