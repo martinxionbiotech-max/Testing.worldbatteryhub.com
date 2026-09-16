@@ -63,6 +63,21 @@ const SITE = 'https://testing.worldbatteryhub.com';
         design passes a battery of these destructive tests — and why the test results, not the datasheet numbers,
         are what regulators actually read.
       </p>
+      <h2>The test matrix</h2>
+      <table>
+        <thead><tr><th>Test</th><th>What it simulates</th><th>What a pass looks like</th></tr></thead>
+        <tbody>
+          <tr><td>Nail penetration</td><td>Internal short from damage</td><td>No fire / no explosion (per standard)</td></tr>
+          <tr><td>Overcharge</td><td>Charger failure</td><td>No fire / no explosion, controlled vent at most</td></tr>
+          <tr><td>Crush</td><td>Crash deformation</td><td>No fire / no explosion</td></tr>
+          <tr><td>External heat</td><td>Adjacent fire or hot soak</td><td>No runaway within the standard's time</td></tr>
+        </tbody>
+      </table>
+      <p class="muted">
+        Outcomes are judged against the standard's criteria (e.g. IEC 62660 / SAE J2464) — "pass" is defined by
+        the standard, not by comfort.
+      </p>
+
 
       <h2>The Author's Take</h2>
       <div class="box">
