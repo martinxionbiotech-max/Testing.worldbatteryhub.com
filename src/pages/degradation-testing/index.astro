@@ -1,0 +1,94 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Degradation Testing | World Battery Hub</title>
+    <meta name="description" content="Degradation testing measures how a battery fades over time — cycle-life testing to the 80% end-of-life point and calendar aging. How fade is measured and what it predicts." />
+    <link rel="canonical" href={`${SITE}/degradation-testing/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; width: 32%; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Degradation Testing</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-16</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> Degradation testing measures how a battery <strong>fades over time and
+        use</strong>. The core method is <strong>cycle-life testing</strong> — repeated charge-discharge until
+        capacity falls to the <strong>80% end-of-life point</strong> — complemented by <strong>calendar-aging
+        tests</strong> that hold batteries at temperature and state of charge. The results predict real lifespan,
+        which is why manufacturers quote cycle counts.
+      </div>
+
+      <h2>What it measures</h2>
+      <table>
+        <thead><tr><th>Method</th><th>What it captures</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Cycle-life testing</strong></td><td>Fade from use — cycles to 80% capacity</td></tr>
+          <tr><td><strong>Calendar-aging testing</strong></td><td>Fade from time + temperature + state of charge</td></tr>
+          <tr><td><strong>Resistance tracking</strong></td><td>Internal resistance rise alongside fade</td></tr>
+        </tbody>
+      </table>
+
+      <h2>How cycle life is counted</h2>
+      <p>
+        The standard protocol fixes the conditions — depth of discharge, temperature, charge/discharge rates — and
+        counts cycles until capacity reaches <strong>80% of original</strong>, the conventional end of life. Because
+        the result depends on those conditions, a cycle number without them is meaningless: the same cell can show
+        wildly different cycle life at 50% vs 100% depth of discharge
+        (see <a href="https://worldbatteryhub.com/lithium/lifespan/">cycle life vs calendar aging</a>).
+      </p>
+
+      <h2>Why calendar aging must be tested separately</h2>
+      <p>
+        A battery also fades while idle — faster in heat and at high state of charge. Calendar-aging tests hold
+        batteries at controlled temperatures and charge states for months, mapping how quickly capacity and
+        resistance drift without any cycling. The two aging paths run simultaneously in real life, so a lifespan
+        claim needs both numbers, not just the cycle count.
+      </p>
+
+      <h2>Limitations</h2>
+      <p>
+        Accelerated testing compresses years into weeks by raising temperature and cycle rate — which can distort
+        the result, because the acceleration itself changes the chemistry. Real-world field data remains the
+        ultimate check on accelerated predictions, which is why manufacturers update their life models as fleet
+        data arrives.
+      </p>
+
+      <h2>The Author's Take</h2>
+      <div class="box">
+        <p><strong>Position:</strong> The cycle count on a datasheet is a promise under laboratory conditions —
+        the honest lifespan number is the pair (cycle life + calendar aging), because a battery fades even while
+        you are not using it.</p>
+        <p><strong>Reasoning:</strong> Most quoted cycle lives omit their conditions, and almost all omit calendar
+        aging. The buyer who asks for both — and the test conditions — is reading the lifespan claim the way it
+        actually behaves, not the way marketing prefers.</p>
+        <p class="muted"><em>This is the author's editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>IEC 62660 / IEC 61960 — cycle-life test references.</li>
+        <li>Cell-manufacturer test documentation — cycle and calendar aging protocols.</li>
+        <li>Battery engineering references — accelerated aging methodology.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>

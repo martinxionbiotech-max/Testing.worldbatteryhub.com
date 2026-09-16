@@ -1,0 +1,91 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Load Testing | World Battery Hub</title>
+    <meta name="description" content="A load test applies a real current load — typically half the CCA rating for 15 seconds — and watches the voltage. The definitive test of a battery's ability to deliver power." />
+    <link rel="canonical" href={`${SITE}/load-testing/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; width: 34%; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Load Testing</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-16</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> A load test applies a <strong>real current load</strong> — classically
+        <strong>half the CCA rating for 15 seconds</strong> — and watches the voltage. A healthy battery holds
+        <strong>~9.6V or above</strong> at 21°C under the load. It is the definitive test of whether a battery can
+        actually deliver the power its rating claims.
+      </div>
+
+      <h2>Why it matters</h2>
+      <p>
+        A battery can read a full resting voltage while failing to deliver current — the voltage says the tank is
+        full, but the load test proves whether the pump works. For a starting battery, delivery is the entire job,
+        which is why the load test is the classic shop-floor decision-maker
+        (see <a href="https://worldbatteryhub.com/lead-acid/12v-voltage-chart/">voltage chart</a> for the resting-only
+        read).
+      </p>
+
+      <h2>Test conditions and interpretation</h2>
+      <table>
+        <thead><tr><th>Item</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Load</strong></td><td>~½ of the CCA rating</td></tr>
+          <tr><td><strong>Duration</strong></td><td>~15 seconds</td></tr>
+          <tr><td><strong>Reference temperature</strong></td><td>~21°C (temperature-corrected)</td></tr>
+          <tr><td><strong>Pass voltage</strong></td><td>≥ ~9.6V at 21°C</td></tr>
+          <tr><td><strong>Below ~9.6V</strong></td><td>Failed — weak or discharged battery</td></tr>
+        </tbody>
+      </table>
+      <p>
+        The pass threshold drops with temperature — the colder the battery, the lower the acceptable floor, which
+        is why the test corrects for temperature before judging.
+      </p>
+
+      <h2>Limitations</h2>
+      <p>
+        A load test measures <strong>delivery, not capacity</strong>: a battery can pass the 15-second load yet hold
+        little energy. For endurance answers use <a href="/capacity-testing/">capacity testing</a>; for a fast
+        health proxy use <a href="/resistance-conductance/">conductance</a>. The three tests answer different
+        questions, and a serious evaluation uses all three.
+      </p>
+
+      <h2>The Author's Take</h2>
+      <div class="box">
+        <p><strong>Position:</strong> The load test is the test that answers the question people actually care
+        about — will it start? — and it deserves its place as the final word after the quicker proxies have
+        flagged a suspect battery.</p>
+        <p><strong>Reasoning:</strong> Voltage, conductance and CCA estimates are proxies; the load test is the
+        delivery itself. When the proxies disagree with the load test, the load test wins — which is why it remains
+        the shop-floor standard despite the newer electronics.</p>
+        <p class="muted"><em>This is the author's editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>Battery Council International (BCI) — load test procedure.</li>
+        <li>SAE J537 / EN 50342 — cranking test references.</li>
+        <li>Tester-manufacturer documentation — load test voltage thresholds.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>
