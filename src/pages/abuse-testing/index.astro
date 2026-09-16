@@ -1,0 +1,88 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abuse Testing: Pushing Batteries to Failure | World Battery Hub</title>
+    <meta name="description" content="Abuse tests deliberately push batteries to failure — nail penetration, crush, overcharge, short circuit, heating — to verify the safety limits before real users ever reach them." />
+    <link rel="canonical" href={`${SITE}/abuse-testing/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; width: 36%; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Abuse Testing: Pushing Batteries to Failure</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-16</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> Abuse testing deliberately drives a battery <strong>past its limits to
+        failure</strong> — nail penetration, crush, overcharge, external short circuit, heating — to verify the
+        safety boundaries and failure behaviour before any real user reaches them. It is the destructive half of
+        battery testing: the tests are designed to break the battery, and the pass criterion is that it fails
+        <strong>safely</strong>.
+      </div>
+
+      <h2>The classic abuse tests</h2>
+      <table>
+        <thead><tr><th>Test</th><th>What it applies</th><th>What it verifies</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Nail penetration</strong></td><td>A conductive nail through the cell</td><td>Internal-short behaviour — the runaway proxy</td></tr>
+          <tr><td><strong>Crush</strong></td><td>Mechanical deformation</td><td>Structure under accident damage</td></tr>
+          <tr><td><strong>Overcharge</strong></td><td>Charging beyond limits</td><td>Protection and venting behaviour</td></tr>
+          <tr><td><strong>External short</strong></td><td>Direct short across terminals</td><td>Current surge and thermal behaviour</td></tr>
+          <tr><td><strong>Heating</strong></td><td>Elevated temperature soak</td><td>Thermal stability threshold</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Why failure is the point</h2>
+      <p>
+        Abuse tests are the opposite of performance tests: the battery is expected to fail, and the measured
+        question is <strong>how</strong> it fails. A cell that vents and cools is a pass; a cell that ignites or
+        explodes is a fail. The boundary they map is what standards such as UN 38.3 and UL 1973 encode into
+        transport and storage rules (see <a href="/standards/un-38.3/">UN 38.3</a> and
+        <a href="https://worldbatteryhub.com/lithium/thermal-runaway/">thermal runaway</a>).
+      </p>
+
+      <h2>The lithium-specific weight</h2>
+      <p>
+        For lithium, abuse testing is the difference between certification and hope: the flammable electrolyte and
+        stored energy mean a failed abuse test is a fire, not a flat battery. That is why every shipped lithium
+        design passes a battery of these destructive tests — and why the test results, not the datasheet numbers,
+        are what regulators actually read.
+      </p>
+
+      <h2>The Author's Take</h2>
+      <div class="box">
+        <p><strong>Position:</strong> Abuse testing is where a battery earns its safety claim — the test that breaks
+        the product on purpose is the one that tells you what happens when the world breaks it by accident, and for
+        lithium that answer is the entire regulatory story.</p>
+        <p><strong>Reasoning:</strong> Performance tests describe the normal; abuse tests describe the worst case. A
+        buyer or engineer who understands the pass criterion — fail safely, not survive — reads battery safety
+        claims correctly: the question is never whether it fails, but how.</p>
+        <p class="muted"><em>This is the author's editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>UN 38.3 / IEC 62133 / UL 1973 — abuse test requirements.</li>
+        <li>Test-laboratory documentation — abuse test setup and pass criteria.</li>
+        <li>Battery engineering references — thermal-runaway behaviour.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>
