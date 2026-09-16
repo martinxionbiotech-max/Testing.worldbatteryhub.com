@@ -61,7 +61,7 @@ const jsonLd = {
         <strong>{standard.object}</strong> of <strong>{standard.chemistry}</strong> batteries. {standard.scope}
       </div>
 
-      <h2>At a glance</h2>
+      <h2>Quick facts</h2>
       <table>
         <tbody>
           <tr><th>Standard</th><td>{standard.code}</td></tr>
@@ -71,6 +71,17 @@ const jsonLd = {
           <tr><th>Scope</th><td>{standard.scope}</td></tr>
         </tbody>
       </table>
+
+      <h2>What this standard covers</h2>
+      <p>
+        <strong>Test object:</strong> {standard.object} for <strong>{standard.chemistry}</strong> batteries.
+        <strong>Scope:</strong> {standard.scope}
+      </p>
+      <p class="muted">
+        Standards define test procedures and pass criteria — the measured values are only comparable when the same
+        standard and conditions apply. See the <a href="https://data.worldbatteryhub.com/cca/">CCA reference</a>
+        for the standards' measurement context.
+      </p>
 
       <h2>Related</h2>
       <div class="related">
