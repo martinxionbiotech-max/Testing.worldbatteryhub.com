@@ -1,0 +1,86 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Self-Discharge Testing | World Battery Hub</title>
+    <meta name="description" content="Self-discharge testing measures how fast a battery loses charge while idle — voltage or capacity tracked over rest periods. Why it matters for shelf life and diagnosis." />
+    <link rel="canonical" href={`${SITE}/self-discharge-testing/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; width: 34%; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Self-Discharge Testing</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-16</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> Self-discharge testing measures how fast a battery <strong>loses charge
+        while idle</strong> — tracking voltage or capacity over a rest period. A healthy lead-acid battery loses
+        roughly <strong>a few percent per month</strong> at room temperature; an abnormally fast loss signals
+        <strong>internal shorts, contamination or sulfation</strong>. It is the diagnostic behind shelf-life claims.
+      </div>
+
+      <h2>What it measures and how</h2>
+      <table>
+        <thead><tr><th>Item</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Method</strong></td><td>Rest the charged battery, track voltage/capacity over days-weeks</td></tr>
+          <tr><td><strong>Normal (lead-acid, ~25°C)</strong></td><td>A few % per month</td></tr>
+          <tr><td><strong>Accelerated screening</strong></td><td>Higher temperature shortens the test</td></tr>
+          <tr><td><strong>Fast failure</strong></td><td>Internal short, metallic contamination, sulfation</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Why it matters</h2>
+      <p>
+        Self-discharge decides <strong>shelf life</strong> — how long a battery survives in storage before it
+        sulfates or drains itself (see
+        <a href="https://worldbatteryhub.com/lead-acid/battery-date-code/">date codes</a> and
+        <a href="https://worldbatteryhub.com/lead-acid/battery-sulfation/">sulfation</a>). It also
+        <strong>screens quality</strong>: in manufacturing, cells with abnormally high self-discharge are the ones
+        hiding defects, which is why the test is a standard sorting gate after formation.
+      </p>
+
+      <h2>Interpretation</h2>
+      <p>
+        A battery that drains several percent per <em>week</em> instead of per month is failing, not resting. The
+        reading separates three conditions: normal (slow, chemistry-limited), high (aging or partial shorts), and
+        catastrophic (internal short — lithium packs in particular must be quarantined at this point).
+      </p>
+
+      <h2>The Author's Take</h2>
+      <div class="box">
+        <p><strong>Position:</strong> Self-discharge is the quietest diagnostic in batteries — nothing visibly
+        happens, which is exactly why the test matters: it catches the failures that declare themselves only after
+        weeks on a shelf or a year in a drawer.</p>
+        <p><strong>Reasoning:</strong> The test reads the battery's internal leaks of charge — the earliest signature of
+        shorts and contamination. For manufacturers it sorts defects; for buyers it explains why shelf-fresh matters;
+        for everyone it is the difference between a battery that rests and one that dies quietly.</p>
+        <p class="muted"><em>This is the author's editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>IEC 61960 / IEC 62660 — self-discharge test references.</li>
+        <li>Manufacturer test documentation — rest-period tracking and screening.</li>
+        <li>Battery engineering references — self-discharge mechanisms.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>
