@@ -1,0 +1,72 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leak Testing | World Battery Hub</title>
+    <meta name="description" content="Leak testing verifies the battery's seal — that no electrolyte can escape over its life. Helium tracer gas, pressure decay and why it is a 100% production gate, not a sample test." />
+    <link rel="canonical" href={`${SITE}/leak-testing/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; width: 32%; }
+      ul { padding-left: 22px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Leak Testing</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-17</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> Leak testing verifies the <strong>seal</strong> — that no electrolyte can escape the cell or battery over its life. It is unusual among battery tests in being a <strong>100% production gate</strong>: every sealed cell made is leak-checked on the line, because a leak is a defect, a corrosion source and a fire risk in one small hole.
+      </div>
+      <h2>What does leak testing find?</h2>
+      <p>A leak is any path through the seal — the crimp, the weld, the valve, the terminal feed-through — through which electrolyte vapour can travel. The test does not look for visible drips; it looks for <strong>microscopic paths</strong>, because the vapour escapes long before a liquid drop ever forms, and the vapour is what corrodes, ages and, in lithium cells, fuels <a href="https://worldbatteryhub.com/lithium/thermal-runaway/">the fire triangle</a>.</p>
+      <h2>Why is a leak a defect and a hazard?</h2>
+      <p>Three consequences follow the same hole: <strong>electrolyte loss</strong> dries the cell and kills capacity; <strong>moisture ingress</strong> degrades the chemistry (lithium reacts violently with water); and the <strong>escaping vapour</strong> is corrosive and flammable. A leaking cell is not a weaker cell — it is a cell on a countdown, and the countdown's length depends on which of the three consequences arrives first.</p>
+      <h2>How is it run?</h2>
+      <p>The laboratory methods, in order of sensitivity:</p>
+      <table>
+        <tbody>
+          <tr><td>Helium tracer gas</td><td>The cell is pressurised or bathed in helium; a mass spectrometer sniffs the escaping atoms — the most sensitive method</td></tr>
+          <tr><td>Pressure decay</td><td>The sealed part is pressurised and the pressure loss over time is measured</td></tr>
+          <tr><td>Bubble test</td><td>The part is pressurised underwater and watched for bubbles — simple, visual, less sensitive</td></tr>
+        </tbody>
+      </table>
+      <h2>Why production leak testing differs from lab testing</h2>
+      <p>The production version is the same physics on an assembly line: <strong>100% of cells</strong> pass through the check in seconds, not hours — typically a helium or pressure-decay station gated to reject automatically. The lab version then audits the line: periodic sampling with the high-sensitivity methods keeps the inline equipment honest. The two levels together are what make "sealed" a verified word rather than a hope.</p>
+      <h2>Our Interpretation</h2>
+      <div class="box">
+        <p><strong>My position:</strong> Leak testing is the quiet quality gate — no headline standards, no dramatic failure videos, just the unglamorous truth that the seal is the battery, and every cell you have ever trusted passed a leak check you never saw.</p>
+        <p><strong>Why:</strong> The industry's safety record rests on unglamorous gates like this one. The leak check is cheap, universal and decisive — which is why it runs on every cell, and why its absence in a cut-price product is the single most reliable warning sign a buyer can look for.</p>
+        <p class="muted"><em>My editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>What to ask the lab</h2>
+      <ul>
+        <li>Which method (helium, pressure decay) and what detection threshold?</li>
+        <li>Is the check 100% inline, or sampled — and what is the sampling plan?</li>
+        <li>Which seal interfaces are covered: crimp, weld, valve, terminals?</li>
+      </ul>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>IEC 60086 / IEC 62133 — sealing integrity requirements for cells.</li>
+        <li>Production engineering references — helium and pressure-decay leak detection practice.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>

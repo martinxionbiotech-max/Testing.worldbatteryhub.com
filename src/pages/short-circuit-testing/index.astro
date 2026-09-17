@@ -1,0 +1,75 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Short-Circuit Testing | World Battery Hub</title>
+    <meta name="description" content="Short-circuit testing connects the battery across near-zero resistance and requires it to survive — the master safety test. UN 38.3 T5, the pass criteria, and what it means for pack design." />
+    <link rel="canonical" href={`${SITE}/short-circuit-testing/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; width: 32%; }
+      ul { padding-left: 22px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Short-Circuit Testing</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-17</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> A deliberate <strong>external short</strong> — the battery is connected across a low-resistance path and must endure it <strong>without fire or explosion</strong> (per the standard's criteria). It is the T5 test of <strong>UN 38.3</strong> and the centrepiece of every battery safety standard, because the short is the worst case every other failure collapses into.
+      </div>
+      <h2>What does a short-circuit test do?</h2>
+      <p>The test takes the battery's worst day and makes it a procedure: close the circuit across a defined low resistance, hold for the standard's duration, and observe. The current spikes toward the battery's maximum, the internal temperature climbs, and the design must contain the energy — through <strong>fuses, current interrupt devices, vents</strong> — without escalating into fire.</p>
+      <h2>Why is the short the master safety test?</h2>
+      <p>Because every abuse pathway ends there: a crush, a puncture, a wiring fault, a failed BMS — all collapse into uncontrolled current through a low-resistance path. If the cell and pack survive the clean, defined short, they survive the messy real-world versions far more often. It is the single test with the most predictive power per minute of laboratory time.</p>
+      <h2>How is it run?</h2>
+      <p>Per the standard: the cell or battery is stabilised, connected across a specified external resistance (a fraction of an ohm for UN 38.3 T5), and held while temperature and voltage are recorded. The pass criterion is explicit — <strong>no fire, no explosion</strong> — with some standards allowing venting. The test is run on every new design and every new cell supplier, because the result is a design property, not a batch property.</p>
+      <h2>The pass criteria</h2>
+      <table>
+        <tbody>
+          <tr><td>UN 38.3 T5</td><td>External short circuit — no fire, no explosion, case temperature within limits</td></tr>
+          <tr><td>IEC 62133</td><td>No fire, no explosion; specified temperature limits</td></tr>
+          <tr><td>UL 1973</td><td>No fire, no explosion; containment of the event</td></tr>
+        </tbody>
+      </table>
+      <p class="muted">Criteria per the named standard — "pass" is defined by the standard, not by comfort.</p>
+      <h2>What the short test means for pack design</h2>
+      <p>The test is where the pack's <strong>current interrupt devices, fuses and cell vents</strong> earn their place: a cell-level vent that relieves pressure before the can ruptures is often the difference between a contained test and a failure. Designers read the short-circuit result as the pack's safety budget — and the test tells them where it was spent.</p>
+      <h2>The Author's Take</h2>
+      <div class="box">
+        <p><strong>My take:</strong> The short-circuit test is the battery industry's moment of truth — one procedure that says more about a design's safety than a year of marketing, because it forces every protective layer to actually work, in sequence, under maximum stress.</p>
+        <p><strong>Why:</strong> A battery that passes the defined short has a safety architecture; one that has never been tested has safety hopes. Between the two, only one belongs in a vehicle or a building, and the test is how you tell them apart.</p>
+        <p class="muted"><em>My editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>What to ask the lab</h2>
+      <ul>
+        <li>Which standard's short-circuit procedure will be applied, and with what external resistance?</li>
+        <li>Is venting allowed under the pass criteria, or does the standard require full containment?</li>
+        <li>Were the cell, the module and the pack all tested — not just the cell?</li>
+      </ul>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>UN 38.3, Test T5 — external short circuit, transport safety.</li>
+        <li>IEC 62133 — portable cell safety, short-circuit clause.</li>
+        <li>UL 1973 — stationary storage safety, external short requirements.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>

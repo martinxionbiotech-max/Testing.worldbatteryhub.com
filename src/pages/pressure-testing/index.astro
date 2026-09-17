@@ -1,0 +1,74 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pressure Testing (Pouch Cells) | World Battery Hub</title>
+    <meta name="description" content="Pressure testing loads the cell mechanically — swelling, stacking pressure, crush — to verify the pouch cell's structure and vent behaviour. Why the pouch's soft case makes pressure a design variable." />
+    <link rel="canonical" href={`${SITE}/pressure-testing/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; width: 32%; }
+      ul { padding-left: 22px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pressure Testing (Pouch Cells)</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-17</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> Pressure testing loads the cell mechanically — <strong>stacking pressure, swelling measurement, crush</strong> — to verify the pouch cell's structure and vent behaviour. The pouch's soft case makes mechanical pressure a <strong>design variable</strong>, not just a stress: the cell is specified with a required compression, and the test verifies it works within that window.
+      </div>
+      <h2>What does pressure testing cover?</h2>
+      <p>Three related loads: <strong>uniform compression</strong> (the stacking pressure the pack applies), <strong>swelling measurement</strong> (how much the cell grows over charge and life), and <strong>crush</strong> (the abuse case, per standard). The first two are engineering parameters; the third is a safety verdict — and the pouch cell's construction makes all three different from the rigid-can world.</p>
+      <h2>Why do pouch cells care more?</h2>
+      <p>The pouch cell's case is a laminated foil bag, not a metal can — which is why it achieves high energy density and why it <strong>needs external support</strong>. Unsupported pouch cells swell, delaminate their layers and lose capacity; over-compressed ones risk internal shorts. The practical consequence: every pouch pack is designed around a compression window, and the pressure test is where that window is proven.</p>
+      <h2>How is it run?</h2>
+      <p>The cell sits between pressure plates while charge, discharge and aging proceed. Two numbers are recorded throughout: the <strong>applied pressure</strong> and the <strong>thickness change</strong>. The verdict comes from the combination — a cell that stays within its swelling budget at its specified pressure passes; one that grows past it, or needs more force to stay flat, is telling you something about its chemistry or its assembly.</p>
+      <h2>The numbers to know</h2>
+      <table>
+        <tbody>
+          <tr><td>Typical stacking pressure</td><td>Roughly tens of kPa for pouch cells (per cell design)</td></tr>
+          <tr><td>Swelling budget</td><td>A few percent of thickness over life, per design</td></tr>
+          <tr><td>Crush test (safety)</td><td>Defined deformation per standard, no fire / no explosion</td></tr>
+        </tbody>
+      </table>
+      <p class="muted">Design-specific values — the cell's datasheet, not the standard, sets the compression window.</p>
+      <h2>Where it fits the qualification ladder</h2>
+      <p>Pressure behaviour is verified <strong>before pack design</strong> (cell characterisation), <strong>during design</strong> (module compression trials), and <strong>after abuse</strong> (did the crush or short leave the cell able to vent safely). It is the test that connects the cell's datasheet promise to the pack's mechanical reality — the place where soft-case physics meets hard-case engineering.</p>
+      <h2>What This Means</h2>
+      <div class="box">
+        <p><strong>My take:</strong> The pouch cell trades its hard case for energy density and pays for it in engineering discipline — and the pressure test is where that discipline is measured. A pouch pack is only as good as the compression design its pressure data was built from.</p>
+        <p><strong>Why:</strong> The can hides its pressure; the pouch announces it. Testing the announcement — the swelling curve under load, over life — is how pack designers convert the pouch's fragility into its advantage, and how buyers can tell a designed pack from a wrapped one.</p>
+        <p class="muted"><em>My editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>What to ask the lab</h2>
+      <ul>
+        <li>What compression window does the cell's datasheet specify, and how is it maintained in the pack?</li>
+        <li>What is the measured swelling over the test, and how much budget remains at end of life?</li>
+        <li>Does the crush test follow a named standard with defined pass criteria?</li>
+      </ul>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>Cell manufacturer datasheets — stacking pressure and swelling specifications.</li>
+        <li>SAE J2464 / IEC 62660 — crush and mechanical abuse procedures.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>

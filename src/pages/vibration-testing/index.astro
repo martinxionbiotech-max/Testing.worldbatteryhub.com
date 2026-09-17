@@ -1,0 +1,75 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vibration Testing | World Battery Hub</title>
+    <meta name="description" content="Vibration testing shakes a battery through the mechanical spectrum of its service life — road vibration, off-road, seismic — to verify mounts, welds and internal connections survive. SAE J2380, IEC 62660." />
+    <link rel="canonical" href={`${SITE}/vibration-testing/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; width: 32%; }
+      ul { padding-left: 22px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Vibration Testing</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-17</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> Vibration testing mounts the battery on a shaker and runs it through the <strong>frequency and amplitude profile of its real service</strong> — road vibration for vehicles, seismic for stationary — to prove the mounts, welds and internal connections survive years of shaking. The standards of reference: <strong>SAE J2380</strong> for EV packs, <strong>IEC 62660</strong> for cells.
+      </div>
+      <h2>What does vibration testing simulate?</h2>
+      <p>Batteries live on machines that vibrate: trucks shake through a million kilometres, EV packs ride the road spectrum, stationary racks survive seismic events. The test compresses those years into hours by replaying the recorded or synthesised vibration profile at accelerated intensity — the goal is not to break the battery but to <strong>prove the weak points are not there</strong>.</p>
+      <h2>Why does vibration kill batteries?</h2>
+      <p>The failure modes are mechanical and quiet: <strong>terminal connections loosen</strong>, <strong>internal welds fatigue</strong>, plate active material sheds, and pouch tabs crack at their stress risers. None of these show in an electrical test — a battery can pass capacity and CCA and still fail its first year on a truck, which is why vibration sits in the qualification ladder for heavy-duty and EV packs.</p>
+      <h2>How is the test run?</h2>
+      <p>The battery is fixtured on a shaker and driven through a defined profile, typically combining <strong>sine sweeps</strong> (to find resonances) and <strong>random vibration</strong> (to replay real road spectra) along <strong>three axes</strong>. The battery is usually monitored electrically during the run, then re-tested for capacity, insulation and leak tightness afterwards — the vibration itself is rarely the verdict; what it loosens is.</p>
+      <h2>The test conditions, roughly</h2>
+      <table>
+        <tbody>
+          <tr><td>Frequency range</td><td>Typically ~7–200 Hz (per standard)</td></tr>
+          <tr><td>Axes</td><td>Three, sequentially</td></tr>
+          <tr><td>Duration</td><td>Hours per axis (accelerated profile)</td></tr>
+          <tr><td>Pass / fail</td><td>No loosening, no leakage, no insulation drop — re-verified after</td></tr>
+        </tbody>
+      </table>
+      <p class="muted">Standard-specific values — the profile follows the application, not the battery.</p>
+      <h2>When does it matter most?</h2>
+      <p>The test separates the <strong>chassis-mounted</strong> world (trucks, off-road, motorcycles) from the shelf world. If the battery mounts to something that vibrates, the vibration test belongs in its acceptance — and the <strong>mount design</strong> is as much on trial as the battery, because a rigid mount transmits the energy a compliant one absorbs.</p>
+      <h2>Why This Matters</h2>
+      <div class="box">
+        <p><strong>My position:</strong> Vibration is the failure mode that hides until year two — the battery that passed every electrical test and then dies on the road, its terminals loose and its welds cracked. The test exists to move that discovery from the customer's vehicle to the laboratory, where it is cheap.</p>
+        <p><strong>Why:</strong> The electrical tests measure what the battery is; the mechanical tests measure whether it survives being what it is, in the place it is. Every vibration failure in the field was a test that was skipped, and the cost ratio between finding it in the lab and finding it on the road is the entire business case for the shaker.</p>
+        <p class="muted"><em>My editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>What to ask the lab</h2>
+      <ul>
+        <li>Which standard and profile will the test follow (SAE J2380, IEC 62660, or a customer profile)?</li>
+        <li>Are the mounts tested with the battery, in the real orientation?</li>
+        <li>Is the electrical state monitored during vibration, or only re-verified afterwards?</li>
+      </ul>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>SAE J2380 — vibration testing of electric vehicle batteries.</li>
+        <li>IEC 62660-2 — secondary lithium-ion cells, reliability and abuse testing.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>

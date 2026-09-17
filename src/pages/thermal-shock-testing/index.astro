@@ -1,0 +1,65 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thermal Shock Testing | World Battery Hub</title>
+    <meta name="description" content="Thermal shock cycles the battery rapidly between hot and cold — stressing seals, welds and interfaces that thermal expansion loosens. A screening test for latent assembly defects." />
+    <link rel="canonical" href={`${SITE}/thermal-shock-testing/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; width: 32%; }
+      ul { padding-left: 22px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Thermal Shock Testing</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-17</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> Thermal shock cycles the battery <strong>rapidly between hot and cold extremes</strong>, stressing the seals, welds and interfaces that thermal expansion loosens. It is a <strong>screening test for latent assembly defects</strong> — the battery that passes every electrical test but fails its first winter is often caught here.
+      </div>
+      <h2>What does thermal shock testing simulate?</h2>
+      <p>Real batteries live through temperature swings: desert day to desert night, heated garage to winter road, engine bay heat to cold soak. The shock test compresses those swings into rapid chamber transfers — minutes between extremes rather than hours — so the mechanical stress of expansion and contraction arrives fast enough to find weak points.</p>
+      <h2>Why does thermal cycling break batteries?</h2>
+      <p>The battery is an assembly of materials with <strong>different expansion coefficients</strong>: metal terminals, plastic seals, ceramic coatings, foil laminates. Each swing forces every interface to slide against its neighbour, and the weak ones — a seal, a weld, a crimp — loosen a little more each cycle. The shock version accelerates the same physics into hours, which is why it catches defects that years of mild cycling hide.</p>
+      <h2>How is it run?</h2>
+      <p>The battery is placed in a chamber and transferred between hot and cold zones on a defined schedule — the "shock" is the transfer speed, not the temperatures themselves. Typical ranges span roughly <strong>−40°C to +85°C</strong>, with the standard prescribing the dwell times and cycle count. After the cycling, the battery is re-verified electrically and for leak tightness — the shock test's real output is what failed afterwards.</p>
+      <h2>Where it fits the qualification ladder</h2>
+      <p>Thermal shock sits alongside <a href="/vibration-testing/">vibration</a> in the environmental screening pair: vibration shakes the mechanical defects loose, thermal shock flexes them loose. Both run <strong>before</strong> the expensive life tests, so the samples that reach cycle testing are structurally sound — otherwise the life test measures the defect, not the design.</p>
+      <h2>Our Read</h2>
+      <div class="box">
+        <p><strong>My read:</strong> Thermal shock is the test for the failure nobody sees coming — the hairline seal crack that only winter finds, the weld that only summer flexes. It exists because batteries fail by season, and seasons are a laboratory problem the test can compress into a day.</p>
+        <p><strong>Why:</strong> The pattern across battery testing is the same everywhere: the cheap screens come first, and the expensive failures are moved as far left as possible. Thermal shock is that logic applied to the calendar — a year of weather, replayed in a chamber, before the first customer ever parks outside.</p>
+        <p class="muted"><em>My editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>What to ask the lab</h2>
+      <ul>
+        <li>Which standard's temperature range and cycle count will be used?</li>
+        <li>What is re-verified after the cycling — capacity, insulation, leak tightness?</li>
+        <li>Does the profile reflect the application's real extremes, or only the standard's minimum?</li>
+      </ul>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>IEC 62660 / IEC 62133 — thermal cycling and shock requirements.</li>
+        <li>UN 38.3 T2 — temperature cycling for transport qualification.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>

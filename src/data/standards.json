@@ -2,14 +2,125 @@
   "generated": "2026-09-15",
   "note": "Battery testing standards database. Each standard is an entity with scope, battery type, chemistry and what it covers. Fields are cross-verified; detailed pass/fail parameters belong in the standard text itself.",
   "standards": [
-    { "id": "sae-j537", "code": "SAE J537", "region": "North America", "chemistry": "Lead-acid", "object": "Cranking performance (CCA/CA/HCA)", "scope": "Cranking-ampere rating of 12V starter batteries — CCA at −18°C (0°F) for 30 s to ≥7.2V; CA at 0°C; HCA at 27°C." },
-    { "id": "en-50342", "code": "EN 50342", "region": "Europe", "chemistry": "Lead-acid (SLI/EFB/AGM)", "object": "Starter battery performance", "scope": "European lead-acid starter-battery standard — capacity (C20), CCA at −18°C, charge acceptance, and cycle endurance for SLI, EFB and AGM." },
-    { "id": "jis-d5301", "code": "JIS D5301", "region": "Japan / Asia", "chemistry": "Lead-acid", "object": "Automotive battery ratings", "scope": "Japanese automotive lead-acid standard — CCA measured at −15°C (warmer than EN/SAE), so its CCA number reads higher for the same battery." },
-    { "id": "din-43539", "code": "DIN 43539", "region": "Germany / Europe", "chemistry": "Lead-acid", "object": "Starter battery cranking", "scope": "German starter-battery test — CCA at −18°C with a stricter 9.0V cut-off, so its CCA number reads lower than EN/SAE for the same battery." },
-    { "id": "iec-60095", "code": "IEC 60095", "region": "International", "chemistry": "Lead-acid", "object": "Starter battery (general)", "scope": "International lead-acid starter-battery standard — dimensional and electrical requirements for automotive SLI batteries." },
-    { "id": "iec-62660", "code": "IEC 62660", "region": "International", "chemistry": "Lithium-ion", "object": "EV cell performance & life", "scope": "Lithium-ion cell standard for EV propulsion — performance, cycle life and abuse tests at cell level." },
-    { "id": "iec-62133", "code": "IEC 62133", "region": "International", "chemistry": "Lithium-ion", "object": "Portable cell safety", "scope": "Safety requirements for portable sealed secondary lithium cells and batteries — overcharge, short circuit, thermal abuse." },
-    { "id": "un-38.3", "code": "UN 38.3", "region": "International (transport)", "chemistry": "Lithium-ion / metal", "object": "Transport safety (T1–T8)", "scope": "UN Manual of Tests and Criteria Part III — eight tests (altitude, thermal, vibration, shock, short circuit, impact, overcharge, forced discharge) required for lithium battery transport." },
-    { "id": "ul-1973", "code": "UL 1973", "region": "North America", "chemistry": "Lithium-ion / other", "object": "Stationary storage safety", "scope": "Safety standard for stationary energy-storage batteries — cell, module and system abuse and thermal-runaway requirements." }
+    {
+      "id": "sae-j537",
+      "code": "SAE J537",
+      "region": "North America",
+      "chemistry": "Lead-acid",
+      "object": "Cranking performance (CCA/CA/HCA)",
+      "scope": "Cranking-ampere rating of 12V starter batteries — CCA at −18°C (0°F) for 30 s to ≥7.2V; CA at 0°C; HCA at 27°C."
+    },
+    {
+      "id": "en-50342",
+      "code": "EN 50342",
+      "region": "Europe",
+      "chemistry": "Lead-acid (SLI/EFB/AGM)",
+      "object": "Starter battery performance",
+      "scope": "European lead-acid starter-battery standard — capacity (C20), CCA at −18°C, charge acceptance, and cycle endurance for SLI, EFB and AGM."
+    },
+    {
+      "id": "jis-d5301",
+      "code": "JIS D5301",
+      "region": "Japan / Asia",
+      "chemistry": "Lead-acid",
+      "object": "Automotive battery ratings",
+      "scope": "Japanese automotive lead-acid standard — CCA measured at −15°C (warmer than EN/SAE), so its CCA number reads higher for the same battery."
+    },
+    {
+      "id": "din-43539",
+      "code": "DIN 43539",
+      "region": "Germany / Europe",
+      "chemistry": "Lead-acid",
+      "object": "Starter battery cranking",
+      "scope": "German starter-battery test — CCA at −18°C with a stricter 9.0V cut-off, so its CCA number reads lower than EN/SAE for the same battery."
+    },
+    {
+      "id": "iec-60095",
+      "code": "IEC 60095",
+      "region": "International",
+      "chemistry": "Lead-acid",
+      "object": "Starter battery (general)",
+      "scope": "International lead-acid starter-battery standard — dimensional and electrical requirements for automotive SLI batteries."
+    },
+    {
+      "id": "iec-62660",
+      "code": "IEC 62660",
+      "region": "International",
+      "chemistry": "Lithium-ion",
+      "object": "EV cell performance & life",
+      "scope": "Lithium-ion cell standard for EV propulsion — performance, cycle life and abuse tests at cell level."
+    },
+    {
+      "id": "iec-62133",
+      "code": "IEC 62133",
+      "region": "International",
+      "chemistry": "Lithium-ion",
+      "object": "Portable cell safety",
+      "scope": "Safety requirements for portable sealed secondary lithium cells and batteries — overcharge, short circuit, thermal abuse."
+    },
+    {
+      "id": "un-38.3",
+      "code": "UN 38.3",
+      "region": "International (transport)",
+      "chemistry": "Lithium-ion / metal",
+      "object": "Transport safety (T1–T8)",
+      "scope": "UN Manual of Tests and Criteria Part III — eight tests (altitude, thermal, vibration, shock, short circuit, impact, overcharge, forced discharge) required for lithium battery transport."
+    },
+    {
+      "id": "ul-1973",
+      "code": "UL 1973",
+      "region": "North America",
+      "chemistry": "Lithium-ion / other",
+      "object": "Stationary storage safety",
+      "scope": "Safety standard for stationary energy-storage batteries — cell, module and system abuse and thermal-runaway requirements."
+    },
+    {
+      "id": "ul-2580",
+      "code": "UL 2580",
+      "region": "North America",
+      "chemistry": "Lithium-ion",
+      "object": "Safety of batteries for use in electric vehicles",
+      "scope": "Covers the safety of EV battery packs and modules against electrical, mechanical and environmental abuse, including crush, drop, short circuit and thermal exposure requirements."
+    },
+    {
+      "id": "ieee-1188",
+      "code": "IEEE 1188",
+      "region": "International",
+      "chemistry": "Lead-acid (VRLA)",
+      "object": "Maintenance, testing and replacement of VRLA batteries for stationary applications",
+      "scope": "Defines inspection intervals, capacity testing practice and replacement criteria for valve-regulated lead-acid batteries in stationary standby service."
+    },
+    {
+      "id": "en-50272",
+      "code": "EN 50272",
+      "region": "Europe",
+      "chemistry": "All chemistries",
+      "object": "Safety requirements for secondary battery rooms and installations",
+      "scope": "Sets ventilation, separation and safety requirements for rooms and installations containing secondary batteries, governing hydrogen management for lead-acid and fire safety provisions."
+    },
+    {
+      "id": "iata-dgr",
+      "code": "IATA DGR",
+      "region": "International (air)",
+      "chemistry": "Lithium-ion",
+      "object": "Air transport of lithium batteries as dangerous goods",
+      "scope": "The air-transport regulation for lithium cells and batteries: classification as dangerous goods, packaging instructions, state-of-charge limits and documentation requirements."
+    },
+    {
+      "id": "un-3171",
+      "code": "UN 3171",
+      "region": "International (road)",
+      "chemistry": "Lithium-ion",
+      "object": "Battery-powered vehicles and equipment",
+      "scope": "The dangerous-goods entry for vehicles and equipment powered by batteries, covering the classification and transport requirements for whole vehicles and self-propelled equipment."
+    },
+    {
+      "id": "sae-j2464",
+      "code": "SAE J2464",
+      "region": "North America",
+      "chemistry": "Lithium-ion",
+      "object": "Electric vehicle battery abuse testing",
+      "scope": "Defines abuse test procedures and pass criteria for EV battery systems, including short circuit, overcharge, crush, nail penetration, immersion and thermal exposure."
+    }
   ]
 }

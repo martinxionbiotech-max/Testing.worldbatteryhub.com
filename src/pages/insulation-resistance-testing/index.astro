@@ -1,0 +1,74 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Insulation Resistance Testing | World Battery Hub</title>
+    <meta name="description" content="Insulation resistance testing measures the leakage path between the battery's high-voltage circuit and its exposed conductive parts — the safety gate checked before and after every mechanical or environmental test." />
+    <link rel="canonical" href={`${SITE}/insulation-resistance-testing/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      .box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 14px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; }
+      th { color: #0f1f3d; width: 32%; }
+      ul { padding-left: 22px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Insulation Resistance Testing</h1>
+      <p class="muted">Battery Testing Methods · Last reviewed 2026-09-17</p>
+
+      <div class="box">
+        <strong>Direct answer:</strong> Insulation resistance testing measures the <strong>leakage path between the high-voltage circuit and the battery's exposed conductive parts</strong> — the case, the chassis, the handles. It is the safety number that must be checked <strong>before and after</strong> every mechanical, environmental or abuse test, because most of those tests try to damage exactly this property.
+      </div>
+      <h2>What does insulation resistance measure?</h2>
+      <p>The test applies a defined voltage between the battery's live parts and its exposed metal, then measures the <strong>resistance of the insulation between them</strong> — expressed in megohms. A healthy battery reads in the megohm range; a damaged one reads far lower, meaning a real current path now exists where only insulation should be.</p>
+      <h2>Why is it a safety number?</h2>
+      <p>The insulation is the barrier between the user and the battery's voltage. A path through a scratched wrapper or a crushed seal does not need to short the battery to be dangerous — it only needs to leak enough current to matter. The resistance reading quantifies that leakage, and the standards set the floor below which the battery is not safe to ship or energise.</p>
+      <h2>How is it run?</h2>
+      <p>A megohmmeter applies a test voltage appropriate to the system (hundreds of volts for traction packs) between the terminals and the case, holding it while the reading stabilises. The procedure matters as much as the instrument: the battery is measured <strong>dry, at defined temperature and state of charge</strong>, because moisture and surface contamination read as failures even on a healthy battery.</p>
+      <h2>The numbers to know</h2>
+      <table>
+        <tbody>
+          <tr><td>Test voltage</td><td>Typically 2× rated voltage or the standard's specified level</td></tr>
+          <tr><td>Typical pass threshold</td><td>Hundreds of kΩ to megohms, per standard</td></tr>
+          <tr><td>When measured</td><td>Before and after every mechanical / environmental / abuse test</td></tr>
+        </tbody>
+      </table>
+      <p class="muted">Standard-specific thresholds — the pass level belongs to the applicable standard, not to the instrument.</p>
+      <h2>Where it fits the test sequence</h2>
+      <p>The insulation reading is the <strong>bracket around every other test</strong>: measured before a vibration or crush run to establish the baseline, and after to detect the damage. A battery that keeps its capacity but loses its insulation has failed the sequence — the capacity is the performance, the insulation is the safety, and the qualification ladder requires both to survive.</p>
+      <h2>The Editor's View</h2>
+      <div class="box">
+        <p><strong>My read:</strong> Insulation resistance is the safety test that costs nothing and is skipped most often — a two-minute measurement that converts 'probably safe' into a number, and every battery standard in the world is built on that conversion being done.</p>
+        <p><strong>Why:</strong> Safety claims without the insulation number are just claims. The reading is the industry's shorthand for 'the barrier is intact' — small effort, decisive meaning, and the reason the same measurement brackets every test in every qualification programme worth the name.</p>
+        <p class="muted"><em>My editorial view, not a purchasing guarantee.</em></p>
+      </div>
+
+      <h2>What to ask the lab</h2>
+      <ul>
+        <li>At what voltage is the insulation measured, per which standard?</li>
+        <li>Is the reading taken before and after each mechanical or environmental test?</li>
+        <li>What is the pass threshold for this battery class, and how much margin remains?</li>
+      </ul>
+
+      <h2>Sources</h2>
+      <ul>
+        <li>IEC 62660 / UL 1973 — insulation resistance requirements for cells and systems.</li>
+        <li>Megohmmeter practice references — measurement conditions and interpretation.</li>
+      </ul>
+
+      <p class="muted">Return to <a href="https://testing.worldbatteryhub.com">Battery Testing Methods</a> · <a href="https://worldbatteryhub.com">World Battery Hub</a>. Informational, not purchasing advice.</p>
+    </div>
+  </body>
+</html>
