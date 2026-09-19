@@ -11,10 +11,13 @@ export function getStaticPaths() {
 const { standard } = Astro.props;
 const SITE = 'https://testing.worldbatteryhub.com';
 const url = `${SITE}/standards/${standard.id}/`;
+// Unified Entity ID scheme (audit §36): WBH-STD-<CODE>
+const entityId = `WBH-STD-${standard.code.replace(/[^A-Za-z0-9]+/g, '').toUpperCase()}`;
 
 const jsonLd = {
   '@type': 'TechArticle',
   '@id': `${url}#article`,
+  identifier: entityId,
   headline: `${standard.code} — ${standard.object}`,
   url,
   about: `${standard.code} battery testing standard`,
@@ -52,7 +55,7 @@ const jsonLd = {
   </head>
   <body>
     <div class="container">
-      <p class="muted"><a href="/">← Testing Methods</a> · Entity: <strong>TestingStandard</strong></p>
+      <p class="muted"><a href="/">← Testing Methods</a> · Entity: <strong>TestingStandard</strong> · ID: <code>{entityId}</code></p>
       <h1>{standard.code}</h1>
       <p class="muted">{standard.object} · Region: {standard.region}</p>
 
