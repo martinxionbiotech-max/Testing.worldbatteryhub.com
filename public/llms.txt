@@ -1,0 +1,39 @@
+# World Battery Hub — Testing
+
+> Battery testing methodology reference — 24 testing-method guides covering capacity, CCA, impedance, safety/abuse, environmental, and cycle-life testing, plus a standards index. Sub-site of the World Battery Hub family.
+
+## Core Pages
+
+- [Home](https://testing.worldbatteryhub.com/): Entry point to the battery testing reference.
+- [Capacity Testing](https://testing.worldbatteryhub.com/capacity-testing/): Capacity test methods and interpretation.
+- [CCA Testing](https://testing.worldbatteryhub.com/cca-testing/): Cold cranking amps test procedures.
+- [Load Testing](https://testing.worldbatteryhub.com/load-testing/): Load test methodology.
+- [Impedance Testing](https://testing.worldbatteryhub.com/impedance-testing/): Internal impedance and conductance measurement.
+- [Resistance / Conductance](https://testing.worldbatteryhub.com/resistance-conductance/): Resistance vs conductance test comparison.
+- [Conductance vs Load Test](https://testing.worldbatteryhub.com/conductance-vs-load-test/): When to use each test method.
+- [Charge Acceptance](https://testing.worldbatteryhub.com/charge-acceptance/): Charge acceptance testing.
+- [Self-Discharge Testing](https://testing.worldbatteryhub.com/self-discharge-testing/): Self-discharge rate measurement.
+- [C-Rate Testing](https://testing.worldbatteryhub.com/c-rate-testing/): C-rate and rate-capability testing.
+- [Capacity Rates](https://testing.worldbatteryhub.com/capacity-rates/): Capacity at different discharge rates.
+- [Reserve Capacity](https://testing.worldbatteryhub.com/reserve-capacity/): Reserve capacity testing.
+- [Degradation Testing](https://testing.worldbatteryhub.com/degradation-testing/): Cycle-life and degradation testing.
+- [Cycle Safety](https://testing.worldbatteryhub.com/cycle-safety/): Safety during charge/discharge cycling.
+- [BMS Testing](https://testing.worldbatteryhub.com/bms-testing/): Battery management system validation.
+- [Abuse Testing](https://testing.worldbatteryhub.com/abuse-testing/): Abuse and destructive testing.
+- [Short-Circuit Testing](https://testing.worldbatteryhub.com/short-circuit-testing/): Short-circuit safety testing.
+- [Thermal Shock Testing](https://testing.worldbatteryhub.com/thermal-shock-testing/): Thermal shock cycling.
+- [Temperature Testing](https://testing.worldbatteryhub.com/temperature-testing/): Temperature-dependent performance testing.
+- [Vibration Testing](https://testing.worldbatteryhub.com/vibration-testing/): Vibration and mechanical stress testing.
+- [Pressure Testing](https://testing.worldbatteryhub.com/pressure-testing/): Pressure and venting tests.
+- [Leak Testing](https://testing.worldbatteryhub.com/leak-testing/): Leak detection methods.
+- [Insulation Resistance Testing](https://testing.worldbatteryhub.com/insulation-resistance-testing/): Insulation resistance measurement.
+- [Acceptance Testing](https://testing.worldbatteryhub.com/acceptance-testing/): Incoming/inspection acceptance testing.
+- [Standards](https://testing.worldbatteryhub.com/standards/): Index of battery testing standards.
+
+## Main site
+
+- [World Battery Hub](https://worldbatteryhub.com/): Main knowledge hub (guides, tools, glossary, methodology).
+
+## Notes
+
+- Testing procedures are general reference descriptions, not certification instructions; always follow the applicable standard's published test protocol for compliance work.
