@@ -1,0 +1,70 @@
+---
+import standards from '../../data/standards.json';
+const SITE = 'https://testing.worldbatteryhub.com';
+const rows = standards.standards;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Battery Testing Standards Index — World Battery Hub</title>
+    <meta name="description" content="Index of battery testing standards: SAE, IEC, JIS, DIN, EN, UL, IEEE, UN and IATA — scope, region, chemistry and the object each standard tests." />
+    <link rel="canonical" href={`${SITE}/standards/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; vertical-align: top; }
+      th { color: #0f1f3d; }
+    </style>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": `${SITE}/standards/#page`,
+      "url": `${SITE}/standards/`,
+      "name": "Battery Testing Standards Index",
+      "isPartOf": { "@id": `${SITE}/` },
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": rows.length,
+        "itemListElement": rows.map((s, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "url": `${SITE}/standards/${s.id}/`,
+          "name": `${s.code} — ${s.object}`
+        }))
+      }
+    })} />
+  </head>
+  <body>
+    <div class="container">
+      <p class="muted"><a href="/">Battery Testing</a> › Standards index</p>
+      <h1>Battery testing standards index</h1>
+      <p>Every standard in the reference database — region, chemistry and the performance or safety object it governs. Follow a code for scope and test conditions.</p>
+      <h2>How to use this index</h2>
+      <p>Use the table to identify the standard that governs the performance claim you are checking — cranking, capacity, cycle life, abuse tolerance or transport. Then open the standard page for scope, chemistry and the questions to ask a supplier. The index is organised by code, not by importance; a standard's presence here does not imply that every supplier claiming it has been tested against the current edition.</p>
+      <h2>What the index does not do</h2>
+      <p>It does not reproduce the standard text, certify a product, or replace a test report. Pass/fail parameters, tolerances and sample conditioning belong to the published standard; the manufacturer's report should state the edition and the clause tested.</p>
+
+      <table>
+        <thead><tr><th>Standard</th><th>Region</th><th>Chemistry</th><th>Object</th></tr></thead>
+        <tbody>
+          {rows.map((s) => (
+            <tr>
+              <td><a href={`/standards/${s.id}/`}>{s.code}</a></td>
+              <td>{s.region}</td>
+              <td>{s.chemistry}</td>
+              <td>{s.object}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p class="muted">Machine-readable versions: <a href="/standards.json">standards.json</a> · <a href="/standards.csv">standards.csv</a></p>
+      <p class="muted">Reference information; the published standard text governs test parameters.</p>
+    </div>
+  </body>
+</html>
