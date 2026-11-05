@@ -1,0 +1,115 @@
+---
+const SITE = 'https://testing.worldbatteryhub.com';
+const groups = [
+  {
+    name: 'Performance tests',
+    blurb: 'What the battery delivers under a defined load and temperature.',
+    items: [
+      ['Capacity testing', '/capacity-testing/', 'Discharge at a specified rate to a cut-off voltage'],
+      ['Capacity rates', '/capacity-rates/', 'How the C-rate changes usable capacity'],
+      ['CCA testing', '/cca-testing/', 'Cold-cranking current at −18°C'],
+      ['Reserve capacity', '/reserve-capacity/', 'Minutes at 25 A to 10.5 V'],
+      ['Load testing', '/load-testing/', 'Voltage response under a real load'],
+      ['C-rate testing', '/c-rate-testing/', 'Charge and discharge at multiples of capacity'],
+      ['Charge acceptance', '/charge-acceptance/', 'How quickly the battery accepts charge'],
+    ],
+  },
+  {
+    name: 'Safety and abuse tests',
+    blurb: 'What happens beyond the normal operating envelope.',
+    items: [
+      ['Abuse testing', '/abuse-testing/', 'Overcharge, over-discharge and mechanical abuse'],
+      ['Short-circuit testing', '/short-circuit-testing/', 'External short and its containment'],
+      ['Thermal shock', '/thermal-shock-testing/', 'Rapid temperature cycling'],
+      ['Pressure testing', '/pressure-testing/', 'Altitude and internal pressure behaviour'],
+      ['Cycle safety', '/cycle-safety/', 'Safety through repeated cycling'],
+    ],
+  },
+  {
+    name: 'Electrical tests',
+    blurb: 'Resistance, conductance and the electronics around the cells.',
+    items: [
+      ['Impedance testing', '/impedance-testing/', 'AC impedance and what it reveals'],
+      ['Resistance & conductance', '/resistance-conductance/', 'DC resistance versus conductance'],
+      ['Conductance vs load test', '/conductance-vs-load-test/', 'Which method predicts failure'],
+      ['Insulation resistance', '/insulation-resistance-testing/', 'Isolation in packs and systems'],
+      ['BMS testing', '/bms-testing/', 'Protection, balancing and state estimation'],
+    ],
+  },
+  {
+    name: 'Environmental and life tests',
+    blurb: 'Temperature, vibration, leakage and the slow loss of performance.',
+    items: [
+      ['Temperature testing', '/temperature-testing/', 'Performance and safety across the range'],
+      ['Vibration testing', '/vibration-testing/', 'Transport and service vibration'],
+      ['Leak testing', '/leak-testing/', 'Case, seal and vent integrity'],
+      ['Self-discharge testing', '/self-discharge-testing/', 'Standby loss over time'],
+      ['Degradation testing', '/degradation-testing/', 'Capacity and resistance over life'],
+      ['Acceptance testing', '/acceptance-testing/', 'Incoming inspection that catches real defects'],
+    ],
+  },
+];
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Battery Test Methods — Performance, Safety, Electrical & Life</title>
+    <meta name="description" content="Battery test methods by category: performance, safety and abuse, electrical and environmental/life tests — with the standard and the question each test answers." />
+    <link rel="canonical" href={`${SITE}/test-methods/`} />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; line-height: 1.6; }
+      .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0f1f3d; }
+      a { color: #1d4ed8; }
+      .muted { color: #64748b; font-size: 0.85rem; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; margin-bottom: 22px; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9f0; vertical-align: top; }
+      th { color: #0f1f3d; }
+    </style>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": `${SITE}/test-methods/#page`,
+      "url": `${SITE}/test-methods/`,
+      "name": "Battery Test Methods",
+      "isPartOf": { "@id": `${SITE}/` },
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": groups.reduce((n, g) => n + g.items.length, 0),
+        "itemListElement": groups.flatMap((g, gi) => g.items.map((it, i) => ({
+          "@type": "ListItem",
+          "position": gi * 100 + i + 1,
+          "url": `${SITE}${it[1]}`,
+          "name": it[0]
+        })))
+      }
+    })} />
+  </head>
+  <body>
+    <div class="container">
+      <p class="muted"><a href="/">Battery Testing</a> › Test methods</p>
+      <h1>Battery test methods</h1>
+      <p>Four families of test, grouped by the question they answer. Each method page states what is measured, what it does not measure, and the standard that governs it.</p>
+      <p class="muted">Related: <a href="/standards/">standards index</a> · <a href="https://worldbatteryhub.com/testing/">testing overview</a></p>
+
+      {groups.map((g) => (
+        <section>
+          <h2>{g.name}</h2>
+          <p>{g.blurb}</p>
+          <table>
+            <thead><tr><th>Method</th><th>What it answers</th></tr></thead>
+            <tbody>
+              {g.items.map((it) => (
+                <tr><td><a href={it[1]}>{it[0]}</a></td><td>{it[2]}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      ))}
+
+      <p class="muted">Reference information; the published standard and the accredited laboratory report are authoritative.</p>
+    </div>
+  </body>
+</html>
