@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && SITE_URL=https://testing.worldbatteryhub.com SITE_NAME=\"World Battery Hub — Testing\" SITE_DESC=\"Battery testing methods: capacity, CCA, load, resistance, cycle and safety testing, with applicable standards.\" OG_IMAGE=https://testing.worldbatteryhub.com/images/og.webp node ../scripts/postbuild.mjs && node ../scripts/generate-markdown.mjs",
+    "build": "astro build && SITE_URL=https://testing.worldbatteryhub.com SITE_NAME=\"World Battery Hub — Testing\" SITE_DESC=\"Battery testing methods: capacity, CCA, load, resistance, cycle and safety testing, with applicable standards.\" OG_IMAGE=https://testing.worldbatteryhub.com/images/og.webp node scripts/postbuild.mjs && node scripts/generate-markdown.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
