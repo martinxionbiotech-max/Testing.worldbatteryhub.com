@@ -86,7 +86,8 @@ const groups = [
         })))
       }
     })} />
-  </head>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which test proves a battery's capacity?", "acceptedAnswer": {"@type": "Answer", "text": "A controlled discharge at a stated C-rate and temperature to a defined cut-off voltage. The label capacity is a nominal figure; only the test result, with its conditions, is evidence."}}, {"@type": "Question", "name": "Can a supplier's test report be trusted?", "acceptedAnswer": {"@type": "Answer", "text": "Only when it states the standard edition, the test conditions, the raw data and the laboratory's accreditation. A summary page without those details is a claim, not evidence."}}]}</script>
+</head>
   <body>
     <div class="container">
       <p class="muted"><a href="/">Battery Testing</a> › Test methods</p>
@@ -94,7 +95,18 @@ const groups = [
       <p>Four families of test, grouped by the question they answer. Each method page states what is measured, what it does not measure, and the standard that governs it.</p>
       <p class="muted">Related: <a href="/standards/">standards index</a> · <a href="https://worldbatteryhub.com/testing/">testing overview</a></p>
 
-      {groups.map((g) => (
+      <h2>How to choose a test</h2>
+<p>Start from the claim you need to verify, not from the test name. A capacity claim needs a controlled discharge at a stated rate and temperature; a cranking claim needs a CCA test at −18 °C; a safety claim needs abuse and propagation tests; a life claim needs cycling at a defined depth of discharge. If the claim does not name the standard, the test cannot confirm it.</p>
+<h2>How to read a test report</h2>
+<ul>
+<li><strong>Standard edition</strong> — a result against an old edition may not satisfy the current requirement.</li>
+<li><strong>Sample conditioning</strong> — temperature, state of charge and rest time change the result.</li>
+<li><strong>Raw data</strong> — a pass/fail summary without the measurements cannot be checked.</li>
+<li><strong>Accreditation</strong> — the laboratory's scope should cover the test it performed.</li>
+</ul>
+<p>Two reports with the same headline number can describe different tests. Compare the method before comparing the result.</p>
+
+{groups.map((g) => (
         <section>
           <h2>{g.name}</h2>
           <p>{g.blurb}</p>
@@ -110,6 +122,11 @@ const groups = [
       ))}
 
       <p class="muted">Reference information; the published standard and the accredited laboratory report are authoritative.</p>
-    </div>
+    <h2>Frequently asked questions</h2>
+<h3>Which test proves a battery's capacity?</h3>
+<p>A controlled discharge at a stated C-rate and temperature to a defined cut-off voltage. The label capacity is a nominal figure; only the test result, with its conditions, is evidence.</p>
+<h3>Can a supplier's test report be trusted?</h3>
+<p>Only when it states the standard edition, the test conditions, the raw data and the laboratory's accreditation. A summary page without those details is a claim, not evidence.</p>
+</div>
   </body>
 </html>
