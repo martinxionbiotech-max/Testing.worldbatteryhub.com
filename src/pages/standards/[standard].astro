@@ -25,6 +25,16 @@ const jsonLd = {
   dateModified: '2026-09-15',
   inLanguage: 'en',
 };
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: `What does ${standard.code} cover?`, acceptedAnswer: { '@type': 'Answer', text: standard.scope } },
+    { '@type': 'Question', name: `Which batteries does ${standard.code} apply to?`, acceptedAnswer: { '@type': 'Answer', text: `${standard.chemistry} batteries in ${standard.region}. The object is ${standard.object}.` } },
+    { '@type': 'Question', name: 'What should I request from a supplier?', acceptedAnswer: { '@type': 'Answer', text: 'The exact edition and clause tested, sample conditioning and test temperature, raw data, and the laboratory accreditation scope for this test.' } },
+  ],
+};
+
 ---
 
 <!DOCTYPE html>
@@ -49,6 +59,7 @@ const jsonLd = {
       .related a { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; padding: 4px 10px; text-decoration: none; font-size: 0.9rem; }
     </style>
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
   
     <script type="application/ld+json" set:html={"{\"@context\": \"https://schema.org\", \"@type\": \"WebPage\", \"@id\": \"https://testing.worldbatteryhub.com/standards/\", \"url\": \"https://testing.worldbatteryhub.com/standards/\", \"name\": \"Standards\", \"publisher\": {\"@id\": \"https://worldbatteryhub.com/#organization\"}, \"isPartOf\": {\"@id\": \"https://testing.worldbatteryhub.com/\"}}"} />
     <script type="application/ld+json" set:html={"{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Battery Testing\", \"item\": \"https://testing.worldbatteryhub.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Standards\", \"item\": \"https://testing.worldbatteryhub.com/standards/\"}]}"} />
@@ -107,7 +118,15 @@ const jsonLd = {
         Ask for the clause tested and the conditioning; if either is missing, the result cannot be compared with another laboratory's.
       </p>
 
-      <h2>Related</h2>
+<h2>Frequently asked questions</h2>
+      <h3>What does {standard.code} cover?</h3>
+      <p>{standard.scope}</p>
+      <h3>Which batteries does {standard.code} apply to?</h3>
+      <p>{standard.chemistry} batteries in {standard.region}. The object is {standard.object}.</p>
+      <h3>What should I request from a supplier?</h3>
+      <p>The exact edition and clause tested, sample conditioning and test temperature, raw data, and the laboratory accreditation scope for this test.</p>
+
+            <h2>Related</h2>
       <div class="related">
         <a href="/cca-testing/">CCA testing</a>
         <a href="/capacity-testing/">Capacity testing</a>
